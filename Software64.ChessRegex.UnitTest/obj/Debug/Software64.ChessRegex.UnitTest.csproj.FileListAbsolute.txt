@@ -1,0 +1,11 @@
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\obj\Debug\Software64.ChessRegex.UnitTest.csprojResolveAssemblyReference.cache
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\obj\Debug\Software64.ChessRegex.UnitTest.csproj.CoreCompileInputs.cache
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\Software64.ChessRegex.UnitTest.dll
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\Software64.ChessRegex.UnitTest.pdb
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\nunit.framework.dll
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\Software64.ChessRegex.dll
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\Software64.ChessRegex.pdb
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\nunit.framework.pdb
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\bin\Debug\nunit.framework.xml
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\obj\Debug\Software64.ChessRegex.UnitTest.dll
+C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex.UnitTest\obj\Debug\Software64.ChessRegex.UnitTest.pdb
