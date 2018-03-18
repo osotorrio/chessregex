@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovePatterns.cs" />
+    <Compile Include="WhatMove.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhoMoved.cs" />
   </ItemGroup>

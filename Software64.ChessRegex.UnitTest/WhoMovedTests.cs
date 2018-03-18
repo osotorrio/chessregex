@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace Software64.ChessRegex.UnitTest
 {
     [TestFixture]
-    public class WhoMovedTest
+    public class WhoMovedTests
     {
         [Test]
         public void Pawn_moves()
@@ -35,7 +32,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Rock_moves()
+        public void Rook_moves()
         {
             // Arrange
             var expected = new List<string>
@@ -54,7 +51,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Raxd1#"
             };
 
-            ActAndAssert(WhoMoved.Rock, expected);
+            ActAndAssert(WhoMoved.Rook, expected);
         }
 
         [Test]

@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovePatternsTest.cs" />
+    <Compile Include="WhatMoveTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestFixture.cs" />
-    <Compile Include="WhoMovedTest.cs" />
+    <Compile Include="WhoMovedTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
