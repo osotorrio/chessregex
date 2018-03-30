@@ -18,12 +18,12 @@
         /// <summary>
         /// It matches when a Knight is moved
         /// </summary>
-        public static string Knight => @"^(N[a-h]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
+        public static string Knight => @"^(N[a-h]?[1-8]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
 
         /// <summary>
         /// It matches when a Bishop is moved
         /// </summary>
-        public static string Bishop => @"^(B[a-h]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
+        public static string Bishop => @"^(B[a-h]?[1-8]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
 
         /// <summary>
         /// It matches when a Queen
