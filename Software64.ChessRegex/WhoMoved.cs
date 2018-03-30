@@ -28,7 +28,7 @@
         /// <summary>
         /// It matches when a Queen
         /// </summary>
-        public static string Queen => @"^(Q[a-h]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
+        public static string Queen => @"^(Q[a-h]?[1-8]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
 
         /// <summary>
         /// It matches when a King

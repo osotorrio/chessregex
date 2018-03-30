@@ -136,18 +136,30 @@ namespace Software64.ChessRegex.UnitTest
             // Arrange
             var expected = new List<string>
             {
-                "Qd1", "Qd1!", "Qd1!!", "Qd1?", "Qd1??", "Qd1!?", "Qd1?!",
-                "Qd1+", "Qd1+!", "Qd1+!!", "Qd1+?", "Qd1+??", "Qd1+!?", "Qd1+?!",
-                "Qd1#",
-                "Qad1", "Qad1!", "Qad1!!", "Qad1?", "Qad1??", "Qad1!?", "Qad1?!",
-                "Qad1+", "Qad1+!", "Qad1+!!", "Qad1+?", "Qad1+??", "Qad1+!?", "Qad1+?!",
-                "Qad1#",
-                "Qxd1", "Qxd1!", "Qxd1!!", "Qxd1?", "Qxd1??", "Qxd1!?", "Qxd1?!",
-                "Qxd1+", "Qxd1+!", "Qxd1+!!", "Qxd1+?", "Qxd1+??", "Qxd1+!?", "Qxd1+?!",
-                "Qxd1#",
-                "Qaxd1", "Qaxd1!", "Qaxd1!!", "Qaxd1?", "Qaxd1??", "Qaxd1!?", "Qaxd1?!",
-                "Qaxd1+", "Qaxd1+!", "Qaxd1+!!", "Qaxd1+?", "Qaxd1+??", "Qaxd1+!?", "Qaxd1+?!",
-                "Qaxd1#"
+                "Qd5", "Qd5!", "Qd5!!", "Qd5?", "Qd5??", "Qd5!?", "Qd5?!",
+                "Qd5+", "Qd5+!", "Qd5+!!", "Qd5+?", "Qd5+??", "Qd5+!?", "Qd5+?!",
+                "Qd5#",
+                "Qad5", "Qad5!", "Qad5!!", "Qad5?", "Qad5??", "Qad5!?", "Qad5?!",
+                "Qad5+", "Qad5+!", "Qad5+!!", "Qad5+?", "Qad5+??", "Qad5+!?", "Qad5+?!",
+                "Qad5#",
+                "Q2d5", "Q2d5!", "Q2d5!!", "Q2d5?", "Q2d5??", "Q2d5!?", "Q2d5?!",
+                "Q2d5+", "Q2d5+!", "Q2d5+!!", "Q2d5+?", "Q2d5+??", "Q2d5+!?", "Q2d5+?!",
+                "Q2d5#",
+                "Qa2d5", "Qa2d5!", "Qa2d5!!", "Qa2d5?", "Qa2d5??", "Qa2d5!?", "Qa2d5?!",
+                "Qa2d5+", "Qa2d5+!", "Qa2d5+!!", "Qa2d5+?", "Qa2d5+??", "Qa2d5+!?", "Qa2d5+?!",
+                "Qa2d5#",
+                "Qxd5", "Qxd5!", "Qxd5!!", "Qxd5?", "Qxd5??", "Qxd5!?", "Qxd5?!",
+                "Qxd5+", "Qxd5+!", "Qxd5+!!", "Qxd5+?", "Qxd5+??", "Qxd5+!?", "Qxd5+?!",
+                "Qxd5#",
+                "Qaxd5", "Qaxd5!", "Qaxd5!!", "Qaxd5?", "Qaxd5??", "Qaxd5!?", "Qaxd5?!",
+                "Qaxd5+", "Qaxd5+!", "Qaxd5+!!", "Qaxd5+?", "Qaxd5+??", "Qaxd5+!?", "Qaxd5+?!",
+                "Qaxd5#",
+                "Q2xd5", "Q2xd5!", "Q2xd5!!", "Q2xd5?", "Q2xd5??", "Q2xd5!?", "Q2xd5?!",
+                "Q2xd5+", "Q2xd5+!", "Q2xd5+!!", "Q2xd5+?", "Q2xd5+??", "Q2xd5+!?", "Q2xd5+?!",
+                "Q2xd5#",
+                "Qa2xd5", "Qa2xd5!", "Qa2xd5!!", "Qa2xd5?", "Qa2xd5??", "Qa2xd5!?", "Qa2xd5?!",
+                "Qa2xd5+", "Qa2xd5+!", "Qa2xd5+!!", "Qa2xd5+?", "Qa2xd5+??", "Qa2xd5+!?", "Qa2xd5+?!",
+                "Qa2xd5#",
             };
 
             ActAndAssert(WhoMoved.Queen, expected);
