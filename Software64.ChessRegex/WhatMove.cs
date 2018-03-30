@@ -66,32 +66,32 @@
         public static string PawnCapturesPromotesCheckmate => @"^([a-h]x[a-h][1-8]\=[RNBQK]\s*\#)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rd1, Rd1!, Rd1!!, Rd1?, Rd1??, Rd1!?, Rd1?!
+        /// It matches the following type of moves: Nd5, Nd5!, Nd5!!, Nd5?, Nd5??, Nd5!?, Nd5?!
         /// </summary>
         public static string Piece => @"^([RNBQK][a-h][1-8](\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rd1+, Rd1+!, Rd1+!!, Rd1+?, Rd1+??, Rd1+!?, Rd1+?!
+        /// It matches the following type of moves: Nd5+, Nd5+!, Nd5+!!, Nd5+?, Nd5+??, Nd5+!?, Nd5+?!
         /// </summary>
         public static string PieceCheck => @"^([RNBQK][a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rd1#
+        /// It matches the following type of moves: Nd5#
         /// </summary>
         public static string PieceCheckmate => @"^([RNBQK][a-h][1-8]\s*\#)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rad1, Rad1!, Rad1!!, Rad1?, Rad1??, Rad1!?, Rad1?!
+        /// It matches the following type of moves: Ncd5, Ncd5!, Ncd5!!, Ncd5?, Ncd5??, Ncd5!?, Ncd5?!
         /// </summary>
         public static string PieceFromColumn => @"^([RNBQK][a-h][a-h][1-8](\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rad1+, Rad1+!, Rad1+!!, Rad1+?, Rad1+??, Rad1+!?, Rad1+?!
+        /// It matches the following type of moves: Ncd5+, Ncd5+!, Ncd5+!!, Ncd5+?, Ncd5+??, Ncd5+!?, Ncd5+?!
         /// </summary>
         public static string PieceFromColumnCheck => @"^([RNBQK][a-h][a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rad1#
+        /// It matches the following type of moves: Ncd5#
         /// </summary>
         public static string PieceFromColumnCheckmate => @"^([RNBQK][a-h][a-h][1-8]\s*\#)$";
 
@@ -126,32 +126,32 @@
         public static string PieceFromSquareCheckmate => @"^([RNBQK][a-h][1-8][a-h][1-8]\s*\#)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rxd1, Rxd1!, Rxd1!!, Rxd1?, Rxd1??, Rxd1!?, Rxd1?!
+        /// It matches the following type of moves: Nxd5, Nxd5!, Nxd5!!, Nxd5?, Nxd5??, Nxd5!?, Nxd5?!
         /// </summary>
         public static string PieceCaptures => @"^([RNBQK]x[a-h][1-8](\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rxd1+, Rxd1+!, Rxd1+!!, Rxd1+?, Rxd1+??, Rxd1+!?, Rxd1+?!
+        /// It matches the following type of moves: Nxd5+, Nxd5+!, Nxd5+!!, Nxd5+?, Nxd5+??, Nxd5+!?, Nxd5+?!
         /// </summary>
         public static string PieceCapturesCheck => @"^([RNBQK]x[a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Rxd1#
+        /// It matches the following type of moves: Nxd5#
         /// </summary>
         public static string PieceCapturesCheckmate => @"^([RNBQK]x[a-h][1-8]\s*\#)$";
 
         /// <summary>
-        /// It matches the following type of moves: Raxd1, Raxd1!, Raxd1!!, Raxd1?, Raxd1??, Raxd1!?, Raxd1?!
+        /// It matches the following type of moves: Ncxd5, Ncxd5!, Ncxd5!!, Ncxd5?, Ncxd5??, Ncxd5!?, Ncxd5?!
         /// </summary>
         public static string PieceFromColumnCaptures => @"^([RNBQK][a-h]x[a-h][1-8](\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Raxd1+, Raxd1+!, Raxd1+!!, Raxd1+?, Raxd1+??, Raxd1+!?, Raxd1+?!
+        /// It matches the following type of moves: Ncxd5+, Ncxd5+!, Ncxd5+!!, Ncxd5+?, Ncxd5+??, Ncxd5+!?, Ncxd5+?!
         /// </summary>
         public static string PieceFromColumnCapturesCheck => @"^([RNBQK][a-h]x[a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
 
         /// <summary>
-        /// It matches the following type of moves: Raxd1#
+        /// It matches the following type of moves: Ncxd5#
         /// </summary>
         public static string PieceFromColumnCapturesCheckmate => @"^([RNBQK][a-h]x[a-h][1-8]\s*\#)$";
 

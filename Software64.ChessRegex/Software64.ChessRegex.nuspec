@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>Software64.ChessRegex</id>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
     <title>$title$</title>
     <authors>osotorrio</authors>
     <owners>osotorrio</owners>
     <projectUrl>https://github.com/osotorrio/chessmen</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Collection of regular expressions for all kind of chess moves.</description>
-    <releaseNotes>Added intellisense XML documentation.</releaseNotes>
+    <releaseNotes>Updated intellisense XML documentation. All examples now are Knight moves.</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>chess chessmen game dotnet c#</tags>
   </metadata>
