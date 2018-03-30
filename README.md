@@ -6,35 +6,63 @@ You can install it from Nuget.org: [https://www.nuget.org/packages/Software64.Ch
 
 Alternatively, you could pull the repository and add the two projects (Software64.ChessRegex and Software.ChessRegex.UnitTest) to your own solution.
 
-# How can you use Chessmen?
+# How to match which pieces has been moved?
 
 ```c#
-using Software64.Chessmen;
-using Software64.Chessmen.Contracts;
-using Software64.Chessmen.Enums;
+using Software64.ChessRegex;
 
-string currentSquare = "d4";
-string targetSquare = "d1";
+    string move = "Nd5+!";
 
-ChessmenBase rook = new Rook(Color.White, currentSquare);
-
-bool canMove = rook.CanMoveTo(targetSquare);
-
-if (canMove)
-{
-  rook.MoveTo(targetSquare);
-}
-
-IEnumerable<string> pseudoMoves = rook.GetPseudoMoves();
-
-// pseudoMoves = [a1, b1, c1, d2, d3, d4, d5, d6, d7, d8, e1, f1, g1, h1]
+    if (Regex.IsMatch(move, WhoMoved.Knight))
+    {
+        // Do something when a Knight has been moved
+    }
 ```
-All Chessmen objects (Rook, Queen, Bishop, etc) internally use [Square](https://github.com/osotorrio/chessmen/blob/master/Software64.Chessmen/Square.cs) which validates if the string (currentSquare) passed is valid. 
 
-There is a third namespace **Software64.Chessmen.Enums** where you can find:
-* [ColorEnum](https://github.com/osotorrio/chessmen/blob/master/Software64.Chessmen/Enums/ColorEnum.cs)
-* [ColumnEnum](https://github.com/osotorrio/chessmen/blob/master/Software64.Chessmen/Enums/ColumnEnum.cs)
-* [RowEnum](https://github.com/osotorrio/chessmen/blob/master/Software64.Chessmen/Enums/RowEnum.cs)
+WhoMoved.Knight will match all the following moves:
+
+"Nd5", "Nd5!", "Nd5!!", "Nd5?", "Nd5??", "Nd5!?", "Nd5?!",
+"Nd5+", "Nd5+!", "Nd5+!!", "Nd5+?", "Nd5+??", "Nd5+!?", "Nd5+?!",
+"Nd5#",
+"Ncd5", "Ncd5!", "Ncd5!!", "Ncd5?", "Ncd5??", "Ncd5!?", "Ncd5?!",
+"Ncd5+", "Ncd5+!", "Ncd5+!!", "Ncd5+?", "Ncd5+??", "Ncd5+!?", "Ncd5+?!",
+"Ncd5#",
+"N7d5", "N7d5!", "N7d5!!", "N7d5?", "N7d5??", "N7d5!?", "N7d5?!",
+"N7d5+", "N7d5+!", "N7d5+!!", "N7d5+?", "N7d5+??", "N7d5+!?", "N7d5+?!",
+"N7d5#",
+"Nc7d5", "Nc7d5!", "Nc7d5!!", "Nc7d5?", "Nc7d5??", "Nc7d5!?", "Nc7d5?!",
+"Nc7d5+", "Nc7d5+!", "Nc7d5+!!", "Nc7d5+?", "Nc7d5+??", "Nc7d5+!?", "Nc7d5+?!",
+"Nc7d5#",
+"Nxd5", "Nxd5!", "Nxd5!!", "Nxd5?", "Nxd5??", "Nxd5!?", "Nxd5?!",
+"Nxd5+", "Nxd5+!", "Nxd5+!!", "Nxd5+?", "Nxd5+??", "Nxd5+!?", "Nxd5+?!",
+"Nxd5#",
+"Ncxd5", "Ncxd5!", "Ncxd5!!", "Ncxd5?", "Ncxd5??", "Ncxd5!?", "Ncxd5?!",
+"Ncxd5+", "Ncxd5+!", "Ncxd5+!!", "Ncxd5+?", "Ncxd5+??", "Ncxd5+!?", "Ncxd5+?!",
+"Ncxd5#",
+"N7xd5", "N7xd5!", "N7xd5!!", "N7xd5?", "N7xd5??", "N7xd5!?", "N7xd5?!",
+"N7xd5+", "N7xd5+!", "N7xd5+!!", "N7xd5+?", "N7xd5+??", "N7xd5+!?", "N7xd5+?!",
+"N7xd5#",
+"Nc7xd5", "Nc7xd5!", "Nc7xd5!!", "Nc7xd5?", "Nc7xd5??", "Nc7xd5!?", "Nc7xd5?!",
+"Nc7xd5+", "Nc7xd5+!", "Nc7xd5+!!", "Nc7xd5+?", "Nc7xd5+??", "Nc7xd5+!?", "Nc7xd5+?!",
+"Nc7xd5#"
+
+# How to match what kind of move?
+
+```c#
+using Software64.ChessRegex;
+
+    string move = "N7xd5?";
+    
+    if (Regex.IsMatch(move, WhatMove.PieceFromRowCaptures))
+    {
+        // Do something when two pieces can move to the same square and the row is used to identify which one.
+    }
+```
+
+WhatMove.PieceFromRowCaptures will match all the following moves:
+
+N7xd5, N7xd5!, N7xd5!!, N7xd5?, N7xd5??, N7xd5!?, N7xd5?!
+
 
 # Specifications
 It targets .NET Framework 4.6.1
