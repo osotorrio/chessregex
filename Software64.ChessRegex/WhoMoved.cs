@@ -13,7 +13,7 @@
         /// <summary>
         /// It matches when a Rook is moved
         /// </summary>
-        public static string Rook => @"^(R[a-h]?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
+        public static string Rook => @"^(R([a-h]|[1-8])?x?[a-h][1-8](\s*[\+\#])?(\s*[\!\?]{1,2})?)$";
 
         /// <summary>
         /// It matches when a Knight is moved
