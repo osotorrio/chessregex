@@ -11,15 +11,15 @@ Alternatively, you could pull the repository and add the two projects (Software6
 ```c#
 using Software64.ChessRegex;
 
-    string move = "Nd5+!";
+string move = "Nd5+!";
 
-    if (Regex.IsMatch(move, WhoMoved.Knight))
-    {
-        // Do something when a Knight has been moved
-    }
+if (Regex.IsMatch(move, WhoMoved.Knight))
+{
+    // Do something when a Knight has been moved
+}
 ```
 
-WhoMoved.Knight will match all the following moves:
+**WhoMoved.Knight** will match all the following moves:
 
 "Nd5", "Nd5!", "Nd5!!", "Nd5?", "Nd5??", "Nd5!?", "Nd5?!",
 "Nd5+", "Nd5+!", "Nd5+!!", "Nd5+?", "Nd5+??", "Nd5+!?", "Nd5+?!",
@@ -51,15 +51,15 @@ WhoMoved.Knight will match all the following moves:
 ```c#
 using Software64.ChessRegex;
 
-    string move = "N7xd5?";
-    
-    if (Regex.IsMatch(move, WhatMove.PieceFromRowCaptures))
-    {
-        // Do something when two pieces can move to the same square and the row is used to identify which one.
-    }
+string move = "N7xd5?";
+
+if (Regex.IsMatch(move, WhatMove.PieceFromRowCaptures))
+{
+    // Do something when two pieces can move to the same square and the row is used to identify which one.
+}
 ```
 
-WhatMove.PieceFromRowCaptures will match all the following moves:
+**WhatMove.PieceFromRowCaptures** will match all the following moves:
 
 N7xd5, N7xd5!, N7xd5!!, N7xd5?, N7xd5??, N7xd5!?, N7xd5?!
 
