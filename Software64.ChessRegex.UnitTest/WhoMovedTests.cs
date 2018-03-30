@@ -9,7 +9,7 @@ namespace Software64.ChessRegex.UnitTest
     public class WhoMovedTests
     {
         [Test]
-        public void Pawn_moves()
+        public void Pawn_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -32,7 +32,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Rook_moves()
+        public void Rook_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -61,7 +61,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves()
+        public void Knight_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -96,7 +96,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Bishop_moves()
+        public void Bishop_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -131,7 +131,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Queen_moves()
+        public void Queen_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -166,7 +166,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void King_moves()
+        public void King_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -183,7 +183,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void CastleKingside_moves()
+        public void CastleKingside_moves_test()
         {
             // Arrange
             var expected = new List<string>
@@ -197,7 +197,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void CastleQueenside_moves()
+        public void CastleQueenside_moves_test()
         {
             // Arrange
             var expected = new List<string>

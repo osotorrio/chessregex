@@ -83,17 +83,47 @@
         /// <summary>
         /// It matches the following type of moves: Rad1, Rad1!, Rad1!!, Rad1?, Rad1??, Rad1!?, Rad1?!
         /// </summary>
-        public static string PieceFrom => @"^([RNBQK][a-h][a-h][1-8](\s*[\!\?]+)?)$";
+        public static string PieceFromColumn => @"^([RNBQK][a-h][a-h][1-8](\s*[\!\?]+)?)$";
 
         /// <summary>
         /// It matches the following type of moves: Rad1+, Rad1+!, Rad1+!!, Rad1+?, Rad1+??, Rad1+!?, Rad1+?!
         /// </summary>
-        public static string PieceFromCheck => @"^([RNBQK][a-h][a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
+        public static string PieceFromColumnCheck => @"^([RNBQK][a-h][a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
 
         /// <summary>
         /// It matches the following type of moves: Rad1#
         /// </summary>
-        public static string PieceFromCheckmate => @"^([RNBQK][a-h][a-h][1-8]\s*\#)$";
+        public static string PieceFromColumnCheckmate => @"^([RNBQK][a-h][a-h][1-8]\s*\#)$";
+
+        /// <summary>
+        /// It matches the following type of moves: N7d5, N7d5!, N7d5!!, N7d5?, N7d5??, N7d5!?, N7d5?!
+        /// </summary>
+        public static string PieceFromRow => @"^([RNBQK][1-8][a-h][1-8](\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: N7d5+, N7d5+!, N7d5+!!, N7d5+?, N7d5+??, N7d5+!?, N7d5+?!
+        /// </summary>
+        public static string PieceFromRowCheck => @"^([RNBQK][1-8][a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: N7d5#
+        /// </summary>
+        public static string PieceFromRowCheckmate => @"^([RNBQK][1-8][a-h][1-8]\s*\#)$";
+
+        /// <summary>
+        /// It matches the following type of moves: Nc7d5, Nc7d5!, Nc7d5!!, Nc7d5?, Nc7d5??, Nc7d5!?, Nc7d5?!
+        /// </summary>
+        public static string PieceFromSquare => @"^([RNBQK][a-h][1-8][a-h][1-8](\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: Nc7d5+, Nc7d5+!, Nc7d5+!!, Nc7d5+?, Nc7d5+??, Nc7d5+!?, Nc7d5+?!
+        /// </summary>
+        public static string PieceFromSquareCheck => @"^([RNBQK][a-h][1-8][a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: Nc7d5#
+        /// </summary>
+        public static string PieceFromSquareCheckmate => @"^([RNBQK][a-h][1-8][a-h][1-8]\s*\#)$";
 
         /// <summary>
         /// It matches the following type of moves: Rxd1, Rxd1!, Rxd1!!, Rxd1?, Rxd1??, Rxd1!?, Rxd1?!
@@ -113,17 +143,47 @@
         /// <summary>
         /// It matches the following type of moves: Raxd1, Raxd1!, Raxd1!!, Raxd1?, Raxd1??, Raxd1!?, Raxd1?!
         /// </summary>
-        public static string PieceFromCaptures => @"^([RNBQK][a-h]x[a-h][1-8](\s*[\!\?]+)?)$";
+        public static string PieceFromColumnCaptures => @"^([RNBQK][a-h]x[a-h][1-8](\s*[\!\?]+)?)$";
 
         /// <summary>
         /// It matches the following type of moves: Raxd1+, Raxd1+!, Raxd1+!!, Raxd1+?, Raxd1+??, Raxd1+!?, Raxd1+?!
         /// </summary>
-        public static string PieceFromCapturesCheck => @"^([RNBQK][a-h]x[a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
+        public static string PieceFromColumnCapturesCheck => @"^([RNBQK][a-h]x[a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
 
         /// <summary>
         /// It matches the following type of moves: Raxd1#
         /// </summary>
-        public static string PieceFromCapturesCheckmate => @"^([RNBQK][a-h]x[a-h][1-8]\s*\#)$";
+        public static string PieceFromColumnCapturesCheckmate => @"^([RNBQK][a-h]x[a-h][1-8]\s*\#)$";
+
+        /// <summary>
+        /// It matches the following type of moves: N7xd5, N7xd5!, N7xd5!!, N7xd5?, N7xd5??, N7xd5!?, N7xd5?!
+        /// </summary>
+        public static string PieceFromRowCaptures => @"^([RNBQK][1-8]x[a-h][1-8](\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: N7xd5+, N7xd5+!, N7xd5+!!, N7xd5+?, N7xd5+??, N7xd5+!?, N7xd5+?!
+        /// </summary>
+        public static string PieceFromRowCapturesCheck => @"^([RNBQK][1-8]x[a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: N7xd5#
+        /// </summary>
+        public static string PieceFromRowCapturesCheckmate => @"^([RNBQK][1-8]x[a-h][1-8]\s*\#)$";
+
+        /// <summary>
+        /// It matches the following type of moves: Nc7xd5, Nc7xd5!, Nc7xd5!!, Nc7xd5?, Nc7xd5??, Nc7xd5!?, Nc7xd5?!
+        /// </summary>
+        public static string PieceFromSquareCaptures => @"^([RNBQK][a-h][1-8]x[a-h][1-8](\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: Nc7xd5+, Nc7xd5+!, Nc7xd5+!!, Nc7xd5+?, Nc7xd5+??, Nc7xd5+!?, Nc7xd5+?!
+        /// </summary>
+        public static string PieceFromSquareCapturesCheck => @"^([RNBQK][a-h][1-8]x[a-h][1-8]\s*\+(\s*[\!\?]+)?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: Nc7xd5#
+        /// </summary>
+        public static string PieceFromSquareCapturesCheckmate => @"^([RNBQK][a-h][1-8]x[a-h][1-8]\s*\#)$";
 
         /// <summary>
         /// It matches the following type of moves: O-O, O-O!, O-O!!, O-O?, O-O??, O-O!?, O-O?!

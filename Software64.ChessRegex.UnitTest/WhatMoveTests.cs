@@ -26,18 +26,32 @@ namespace Software64.ChessRegex.UnitTest
                 "dxe8=Q", "dxe8=Q!", "dxe8=Q!!", "dxe8=Q?", "dxe8=Q??", "dxe8=Q!?", "dxe8=Q?!",
                 "dxe8=Q+", "dxe8=Q+!", "dxe8=Q+!!", "dxe8=Q+?", "dxe8=Q+??", "dxe8=Q+!?", "dxe8=Q+?!",
                 "dxe8=Q#",
-                "Rd1", "Rd1!", "Rd1!!", "Rd1?", "Rd1??", "Rd1!?", "Rd1?!",
-                "Rd1+", "Rd1+!", "Rd1+!!", "Rd1+?", "Rd1+??", "Rd1+!?", "Rd1+?!",
-                "Rd1#",
-                "Rad1", "Rad1!", "Rad1!!", "Rad1?", "Rad1??", "Rad1!?", "Rad1?!",
-                "Rad1+", "Rad1+!", "Rad1+!!", "Rad1+?", "Rad1+??", "Rad1+!?", "Rad1+?!",
-                "Rad1#",
-                "Rxd1", "Rxd1!", "Rxd1!!", "Rxd1?", "Rxd1??", "Rxd1!?", "Rxd1?!",
-                "Rxd1+", "Rxd1+!", "Rxd1+!!", "Rxd1+?", "Rxd1+??", "Rxd1+!?", "Rxd1+?!",
-                "Rxd1#",
-                "Raxd1", "Raxd1!", "Raxd1!!", "Raxd1?", "Raxd1??", "Raxd1!?", "Raxd1?!",
-                "Raxd1+", "Raxd1+!", "Raxd1+!!", "Raxd1+?", "Raxd1+??", "Raxd1+!?", "Raxd1+?!",
-                "Raxd1#",
+
+                "Nd5", "Nd5!", "Nd5!!", "Nd5?", "Nd5??", "Nd5!?", "Nd5?!",
+                "Nd5+", "Nd5+!", "Nd5+!!", "Nd5+?", "Nd5+??", "Nd5+!?", "Nd5+?!",
+                "Nd5#",
+                "Ncd5", "Ncd5!", "Ncd5!!", "Ncd5?", "Ncd5??", "Ncd5!?", "Ncd5?!",
+                "Ncd5+", "Ncd5+!", "Ncd5+!!", "Ncd5+?", "Ncd5+??", "Ncd5+!?", "Ncd5+?!",
+                "Ncd5#",
+                "N7d5", "N7d5!", "N7d5!!", "N7d5?", "N7d5??", "N7d5!?", "N7d5?!",
+                "N7d5+", "N7d5+!", "N7d5+!!", "N7d5+?", "N7d5+??", "N7d5+!?", "N7d5+?!",
+                "N7d5#",
+                "Nc7d5", "Nc7d5!", "Nc7d5!!", "Nc7d5?", "Nc7d5??", "Nc7d5!?", "Nc7d5?!",
+                "Nc7d5+", "Nc7d5+!", "Nc7d5+!!", "Nc7d5+?", "Nc7d5+??", "Nc7d5+!?", "Nc7d5+?!",
+                "Nc7d5#",
+                "Nxd5", "Nxd5!", "Nxd5!!", "Nxd5?", "Nxd5??", "Nxd5!?", "Nxd5?!",
+                "Nxd5+", "Nxd5+!", "Nxd5+!!", "Nxd5+?", "Nxd5+??", "Nxd5+!?", "Nxd5+?!",
+                "Nxd5#",
+                "Ncxd5", "Ncxd5!", "Ncxd5!!", "Ncxd5?", "Ncxd5??", "Ncxd5!?", "Ncxd5?!",
+                "Ncxd5+", "Ncxd5+!", "Ncxd5+!!", "Ncxd5+?", "Ncxd5+??", "Ncxd5+!?", "Ncxd5+?!",
+                "Ncxd5#",
+                "N7xd5", "N7xd5!", "N7xd5!!", "N7xd5?", "N7xd5??", "N7xd5!?", "N7xd5?!",
+                "N7xd5+", "N7xd5+!", "N7xd5+!!", "N7xd5+?", "N7xd5+??", "N7xd5+!?", "N7xd5+?!",
+                "N7xd5#",
+                "Nc7xd5", "Nc7xd5!", "Nc7xd5!!", "Nc7xd5?", "Nc7xd5??", "Nc7xd5!?", "Nc7xd5?!",
+                "Nc7xd5+", "Nc7xd5+!", "Nc7xd5+!!", "Nc7xd5+?", "Nc7xd5+??", "Nc7xd5+!?", "Nc7xd5+?!",
+                "Nc7xd5#",
+
                 "O-O", "O-O!", "O-O!!", "O-O?", "O-O??", "O-O!?", "O-O?!",
                 "O-O+", "O-O+!", "O-O+!!", "O-O+?", "O-O+??", "O-O+!?", "O-O+?!",
                 "O-O#",
@@ -48,182 +62,254 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Pawn_moves()
+        public void Pawn_moves_test()
         {
             AssertPatternReturnsExpected(WhatMove.Pawn, "e4, e4!, e4!!, e4?, e4??, e4!?, e4?!");
         }
 
         [Test] 
-        public void Pawn_moves_with_check()
+        public void Pawn_moves_with_check_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCheck, "e4+, e4+!, e4+!!, e4+?, e4+??, e4+!?, e4+?!");
         }
 
         [Test]
-        public void Pawn_moves_with_checkmate()
+        public void Pawn_moves_with_checkmate_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCheckmate, "e4#");
         }
 
         [Test]
-        public void Pawn_promotes()
+        public void Pawn_promotes_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnPromotes, "e8=Q, e8=Q!, e8=Q!!, e8=Q?, e8=Q??, e8=Q!?, e8=Q?!");
         }
 
         [Test]
-        public void Pawn_promotes_with_check()
+        public void Pawn_promotes_with_check_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnPromotesCheck, "e8=Q+, e8=Q+!, e8=Q+!!, e8=Q+?, e8=Q+??, e8=Q+!?, e8=Q+?!");
         }
 
         [Test]
-        public void Pawn_promotes_with_checkmate()
+        public void Pawn_promotes_with_checkmate_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnPromotesCheckmate, "e8=Q#");
         }
 
         [Test]
-        public void Pawn_captures()
+        public void Pawn_captures_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCaptures, "dxe4, dxe4!, dxe4!!, dxe4?, dxe4??, dxe4!?, dxe4?!");
         }
 
         [Test]
-        public void Pawn_captures_with_check()
+        public void Pawn_captures_with_check_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCapturesCheck, "dxe4+, dxe4+!, dxe4+!!, dxe4+?, dxe4+??, dxe4+!?, dxe4+?!");
         }
         
         [Test]
-        public void Pawn_captures_with_checkmate()
+        public void Pawn_captures_with_checkmate_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCapturesCheckmate, "dxe4#");
         }
      
         [Test]
-        public void Pawn_captures_and_promotes()
+        public void Pawn_captures_and_promotes_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCapturesPromotes, "dxe8=Q, dxe8=Q!, dxe8=Q!!, dxe8=Q?, dxe8=Q??, dxe8=Q!?, dxe8=Q?!");
         }
 
         [Test]
-        public void Pawn_captures_and_promotes_with_check()
+        public void Pawn_captures_and_promotes_with_check_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCapturesPromotesCheck, "dxe8=Q+, dxe8=Q+!, dxe8=Q+!!, dxe8=Q+?, dxe8=Q+??, dxe8=Q+!?, dxe8=Q+?!");
         }
 
         [Test]
-        public void Pawn_captures_and_promotes_with_checkmate()
+        public void Pawn_captures_and_promotes_with_checkmate_test()
         {
             AssertPatternReturnsExpected(WhatMove.PawnCapturesPromotesCheckmate, "dxe8=Q#");
         }
 
         [Test]
-        public void Piece_moves()
+        public void Piece_moves_test()
         {
-            AssertPatternReturnsExpected(WhatMove.Piece, "Rd1, Rd1!, Rd1!!, Rd1?, Rd1??, Rd1!?, Rd1?!");
+            AssertPatternReturnsExpected(WhatMove.Piece, "Nd5, Nd5!, Nd5!!, Nd5?, Nd5??, Nd5!?, Nd5?!");
         }
 
         [Test]
-        public void Piece_moves_with_check()
+        public void Piece_moves_with_check_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceCheck, "Rd1+, Rd1+!, Rd1+!!, Rd1+?, Rd1+??, Rd1+!?, Rd1+?!");
+            AssertPatternReturnsExpected(WhatMove.PieceCheck, "Nd5+, Nd5+!, Nd5+!!, Nd5+?, Nd5+??, Nd5+!?, Nd5+?!");
         }
 
         [Test]
-        public void Piece_moves_with_checkmate()
+        public void Piece_moves_with_checkmate_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceCheckmate, "Rd1#");
+            AssertPatternReturnsExpected(WhatMove.PieceCheckmate, "Nd5#");
         }
 
         [Test]
-        public void Piece_moves_from()
+        public void Piece_moves_from_column_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceFrom, "Rad1, Rad1!, Rad1!!, Rad1?, Rad1??, Rad1!?, Rad1?!");
+            AssertPatternReturnsExpected(WhatMove.PieceFromColumn, "Ncd5, Ncd5!, Ncd5!!, Ncd5?, Ncd5??, Ncd5!?, Ncd5?!");
         }
 
         [Test]
-        public void Piece_moves_from_with_check()
+        public void Piece_moves_from_column_with_check_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceFromCheck, "Rad1+, Rad1+!, Rad1+!!, Rad1+?, Rad1+??, Rad1+!?, Rad1+?!");
+            AssertPatternReturnsExpected(WhatMove.PieceFromColumnCheck, "Ncd5+, Ncd5+!, Ncd5+!!, Ncd5+?, Ncd5+??, Ncd5+!?, Ncd5+?!");
         }
 
         [Test]
-        public void Piece_moves_from_with_checkmate()
+        public void Piece_moves_from_column_with_checkmate_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceFromCheckmate, "Rad1#");
+            AssertPatternReturnsExpected(WhatMove.PieceFromColumnCheckmate, "Ncd5#");
         }
 
         [Test]
-        public void Piece_captures()
+        public void Piece_moves_from_row_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceCaptures, "Rxd1, Rxd1!, Rxd1!!, Rxd1?, Rxd1??, Rxd1!?, Rxd1?!");
+            AssertPatternReturnsExpected(WhatMove.PieceFromRow, "N7d5, N7d5!, N7d5!!, N7d5?, N7d5??, N7d5!?, N7d5?!");
         }
 
         [Test]
-        public void Piece_captures_with_check()
+        public void Piece_moves_from_row_with_check_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceCapturesCheck, "Rxd1+, Rxd1+!, Rxd1+!!, Rxd1+?, Rxd1+??, Rxd1+!?, Rxd1+?!");
+            AssertPatternReturnsExpected(WhatMove.PieceFromRowCheck, "N7d5+, N7d5+!, N7d5+!!, N7d5+?, N7d5+??, N7d5+!?, N7d5+?!");
         }
 
         [Test]
-        public void Piece_captures_with_checkmate()
+        public void Piece_moves_from_row_with_checkmate_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceCapturesCheckmate, "Rxd1#");
+            AssertPatternReturnsExpected(WhatMove.PieceFromRowCheckmate, "N7d5#");
+        }
+
+        [Test]
+        public void Piece_moves_from_square_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromSquare, "Nc7d5, Nc7d5!, Nc7d5!!, Nc7d5?, Nc7d5??, Nc7d5!?, Nc7d5?!");
+        }
+
+        [Test]
+        public void Piece_moves_from_square_with_check_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromSquareCheck, "Nc7d5+, Nc7d5+!, Nc7d5+!!, Nc7d5+?, Nc7d5+??, Nc7d5+!?, Nc7d5+?!");
+        }
+
+        [Test]
+        public void Piece_moves_from_square_with_checkmate_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromSquareCheckmate, "Nc7d5#");
+        }
+
+        [Test]
+        public void Piece_captures_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceCaptures, "Nxd5, Nxd5!, Nxd5!!, Nxd5?, Nxd5??, Nxd5!?, Nxd5?!");
+        }
+
+        [Test]
+        public void Piece_captures_with_check_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceCapturesCheck, "Nxd5+, Nxd5+!, Nxd5+!!, Nxd5+?, Nxd5+??, Nxd5+!?, Nxd5+?!");
+        }
+
+        [Test]
+        public void Piece_captures_with_checkmate_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceCapturesCheckmate, "Nxd5#");
         }
         
         [Test]
-        public void Piece_captures_from()
+        public void Piece_captures_from_column_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceFromCaptures, "Raxd1, Raxd1!, Raxd1!!, Raxd1?, Raxd1??, Raxd1!?, Raxd1?!");
+            AssertPatternReturnsExpected(WhatMove.PieceFromColumnCaptures, "Ncxd5, Ncxd5!, Ncxd5!!, Ncxd5?, Ncxd5??, Ncxd5!?, Ncxd5?!");
         }
 
         [Test]
-        public void Piece_captures_from_with_check()
+        public void Piece_captures_from_column_with_check_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceFromCapturesCheck, "Raxd1+, Raxd1+!, Raxd1+!!, Raxd1+?, Raxd1+??, Raxd1+!?, Raxd1+?!");
+            AssertPatternReturnsExpected(WhatMove.PieceFromColumnCapturesCheck, "Ncxd5+, Ncxd5+!, Ncxd5+!!, Ncxd5+?, Ncxd5+??, Ncxd5+!?, Ncxd5+?!");
         }
 
         [Test]
-        public void Piece_captures_from_with_checkmate()
+        public void Piece_captures_from_column_with_checkmate_test()
         {
-            AssertPatternReturnsExpected(WhatMove.PieceFromCapturesCheckmate, "Raxd1#");
+            AssertPatternReturnsExpected(WhatMove.PieceFromColumnCapturesCheckmate, "Ncxd5#");
         }
 
         [Test]
-        public void Castling_kingside()
+        public void Piece_captures_from_row_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromRowCaptures, "N7xd5, N7xd5!, N7xd5!!, N7xd5?, N7xd5??, N7xd5!?, N7xd5?!");
+        }
+
+        [Test]
+        public void Piece_captures_from_row_with_check_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromRowCapturesCheck, "N7xd5+, N7xd5+!, N7xd5+!!, N7xd5+?, N7xd5+??, N7xd5+!?, N7xd5+?!");
+        }
+
+        [Test]
+        public void Piece_captures_from_row_with_checkmate_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromRowCapturesCheckmate, "N7xd5#");
+        }
+
+        [Test]
+        public void Piece_captures_from_square_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromSquareCaptures, "Nc7xd5, Nc7xd5!, Nc7xd5!!, Nc7xd5?, Nc7xd5??, Nc7xd5!?, Nc7xd5?!");
+        }
+
+        [Test]
+        public void Piece_captures_from_square_with_check_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromSquareCapturesCheck, "Nc7xd5+, Nc7xd5+!, Nc7xd5+!!, Nc7xd5+?, Nc7xd5+??, Nc7xd5+!?, Nc7xd5+?!");
+        }
+
+        [Test]
+        public void Piece_captures_from_square_with_checkmate_test()
+        {
+            AssertPatternReturnsExpected(WhatMove.PieceFromSquareCapturesCheckmate, "Nc7xd5#");
+        }
+
+        [Test]
+        public void Castling_kingside_test()
         {
             AssertPatternReturnsExpected(WhatMove.CastledKingside, "O-O, O-O!, O-O!!, O-O?, O-O??, O-O!?, O-O?!");
         }
 
         [Test]
-        public void Castling_kingside_with_check()
+        public void Castling_kingside_with_check_test()
         {
             AssertPatternReturnsExpected(WhatMove.CastledKingsideCheck, "O-O+, O-O+!, O-O+!!, O-O+?, O-O+??, O-O+!?, O-O+?!");
         }
 
         [Test]
-        public void Castling_kingside_with_checkmate()
+        public void Castling_kingside_with_checkmate_test()
         {
             AssertPatternReturnsExpected(WhatMove.CastledKingsideCheckmate, "O-O#");
         }
 
 
         [Test]
-        public void Castling_queenside()
+        public void Castling_queenside_test()
         {
             AssertPatternReturnsExpected(WhatMove.CastledQueenside, "O-O-O, O-O-O!, O-O-O!!, O-O-O?, O-O-O??, O-O-O!?, O-O-O?!");
         }
 
         [Test]
-        public void Castling_queenside_with_check()
+        public void Castling_queenside_with_check_test()
         {
             AssertPatternReturnsExpected(WhatMove.CastledQueensideCheck, "O-O-O+, O-O-O+!, O-O-O+!!, O-O-O+?, O-O-O+??, O-O-O+!?, O-O-O+?!");
         }
 
         [Test]
-        public void Castling_queenside_with_checkmate()
+        public void Castling_queenside_with_checkmate_test()
         {
             AssertPatternReturnsExpected(WhatMove.CastledQueensideCheckmate, "O-O-O#");
         }
