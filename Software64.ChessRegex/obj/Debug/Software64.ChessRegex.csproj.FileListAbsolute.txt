@@ -1,5 +1,0 @@
-C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex\bin\Debug\Software64.ChessRegex.dll
-C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex\bin\Debug\Software64.ChessRegex.pdb
-C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex\obj\Debug\Software64.ChessRegex.csproj.CoreCompileInputs.cache
-C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex\obj\Debug\Software64.ChessRegex.dll
-C:\Projects\Github\osotorrio\software64\chessregex\Software64.ChessRegex\obj\Debug\Software64.ChessRegex.pdb
