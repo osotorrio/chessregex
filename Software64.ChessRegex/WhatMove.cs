@@ -23,17 +23,17 @@
         /// <summary>
         /// It matches the following type of moves: e8=Q, e8=Q!, e8=Q!!, e8=Q?, e8=Q??, e8=Q!?, e8=Q?!
         /// </summary>
-        public static string PawnPromotes => @"^([a-h][1-8]\=[RNBQK](\s*[\!\?]+)?)$";
+        public static string PawnPromotes => @"^([a-h](1|8)\=[RNBQK](\s*[\!\?]+)?)$"; 
 
         /// <summary>
         /// It matches the following type of moves: e8=Q+, e8=Q+!, e8=Q+!!, e8=Q+?, e8=Q+??, e8=Q+!?, e8=Q+?!
         /// </summary>
-        public static string PawnPromotesCheck => @"^([a-h][1-8]\=[RNBQK]\s*\+(\s*[\!\?]+)?)$";
+        public static string PawnPromotesCheck => @"^([a-h](1|8)\=[RNBQK]\s*\+(\s*[\!\?]+)?)$"; 
 
         /// <summary>
         /// It matches the following type of moves: e8=Q#
         /// </summary>
-        public static string PawnPromotesCheckmate => @"^([a-h][1-8]\=[RNBQK]\s*\#)$";
+        public static string PawnPromotesCheckmate => @"^([a-h](1|8)\=[RNBQK]\s*\#)$"; 
 
         /// <summary>
         /// It matches the following type of moves: dxe4, dxe4!, dxe4!!, dxe4?, dxe4??, dxe4!?, dxe4?!
@@ -53,17 +53,17 @@
         /// <summary>
         /// It matches the following type of moves: dxe8=Q, dxe8=Q!, dxe8=Q!!, dxe8=Q?, dxe8=Q??, dxe8=Q!?, dxe8=Q?!
         /// </summary>
-        public static string PawnCapturesPromotes => @"^([a-h]x[a-h][1-8]\=[RNBQK](\s*[\!\?]+)?)$";
+        public static string PawnCapturesPromotes => @"^([a-h]x[a-h](1|8)\=[RNBQK](\s*[\!\?]+)?)$"; 
 
         /// <summary>
         /// It matches the following type of moves: dxe8=Q+, dxe8=Q+!, dxe8=Q+!!, dxe8=Q+?, dxe8=Q+??, dxe8=Q+!?, dxe8=Q+?!
         /// </summary>
-        public static string PawnCapturesPromotesCheck => @"^([a-h]x[a-h][1-8]\=[RNBQK]\s*\+(\s*[\!\?]+)?)$";
+        public static string PawnCapturesPromotesCheck => @"^([a-h]x[a-h](1|8)\=[RNBQK]\s*\+(\s*[\!\?]+)?)$"; 
 
         /// <summary>
         /// It matches the following type of moves: dxe8=Q#
         /// </summary>
-        public static string PawnCapturesPromotesCheckmate => @"^([a-h]x[a-h][1-8]\=[RNBQK]\s*\#)$";
+        public static string PawnCapturesPromotesCheckmate => @"^([a-h]x[a-h](1|8)\=[RNBQK]\s*\#)$"; 
 
         /// <summary>
         /// It matches the following type of moves: Nd5, Nd5!, Nd5!!, Nd5?, Nd5??, Nd5!?, Nd5?!
