@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
@@ -10,14 +9,14 @@ namespace Software64.ChessRegex.UnitTest
     public class ChessRegex2Tests
     {
         [Test]
-        public void Pawn_move_test()
+        public void Pawn_moves_test()
         {
             // Arrange
             var expected = new List<string>
             {
                 "e4", "e4!", "e4!!", "e4?", "e4??", "e4!?", "e4?!",
                 "e4+", "e4+!", "e4+!!", "e4+?", "e4+??", "e4+!?", "e4+?!",
-                "e4++", "e4#",
+                "e4++", "e4#"
             };
 
             ActAndAssert(ChessRegex2.PawnMoves, expected);
@@ -31,7 +30,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "e8=Q", "e8=Q!", "e8=Q!!", "e8=Q?", "e8=Q??", "e8=Q!?", "e8=Q?!",
                 "e8=Q+", "e8=Q+!", "e8=Q+!!", "e8=Q+?", "e8=Q+??", "e8=Q+!?", "e8=Q+?!",
-                "e8=Q++", "e8=Q#",
+                "e8=Q++", "e8=Q#"
             };
 
             ActAndAssert(ChessRegex2.PawnPromotes, expected);
@@ -45,7 +44,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "dxe4", "dxe4!", "dxe4!!", "dxe4?", "dxe4??", "dxe4!?", "dxe4?!",
                 "dxe4+", "dxe4+!", "dxe4+!!", "dxe4+?", "dxe4+??", "dxe4+!?", "dxe4+?!",
-                "dxe4++", "dxe4#",
+                "dxe4++", "dxe4#"
             };
 
             ActAndAssert(ChessRegex2.PawnCaptures, expected);
@@ -59,7 +58,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "dxe8=Q", "dxe8=Q!", "dxe8=Q!!", "dxe8=Q?", "dxe8=Q??", "dxe8=Q!?", "dxe8=Q?!",
                 "dxe8=Q+", "dxe8=Q+!", "dxe8=Q+!!", "dxe8=Q+?", "dxe8=Q+??", "dxe8=Q+!?", "dxe8=Q+?!",
-                "dxe8=Q++", "dxe8=Q#",
+                "dxe8=Q++", "dxe8=Q#"
             };
 
             ActAndAssert(ChessRegex2.PawnCapturesPromotes, expected);
@@ -73,7 +72,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "Rd1", "Rd1!", "Rd1!!", "Rd1?", "Rd1??", "Rd1!?", "Rd1?!",
                 "Rd1+", "Rd1+!", "Rd1+!!", "Rd1+?", "Rd1+??", "Rd1+!?", "Rd1+?!",
-                "Rd1++", "Rd1#",
+                "Rd1++", "Rd1#"
             };
 
             ActAndAssert(ChessRegex2.RookMoves, expected);
@@ -87,7 +86,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "Rad1", "Rad1!", "Rad1!!", "Rad1?", "Rad1??", "Rad1!?", "Rad1?!",
                 "Rad1+", "Rad1+!", "Rad1+!!", "Rad1+?", "Rad1+??", "Rad1+!?", "Rad1+?!",
-                "Rad1++", "Rad1#",
+                "Rad1++", "Rad1#"
             };
 
             ActAndAssert(ChessRegex2.RookMovesFromFile, expected);
@@ -101,7 +100,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "R5d1", "R5d1!", "R5d1!!", "R5d1?", "R5d1??", "R5d1!?", "R5d1?!",
                 "R5d1+", "R5d1+!", "R5d1+!!", "R5d1+?", "R5d1+??", "R5d1+!?", "R5d1+?!",
-                "R5d1++", "R5d1#",
+                "R5d1++", "R5d1#"
             };
 
             ActAndAssert(ChessRegex2.RookMovesFromRank, expected);
@@ -115,7 +114,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "Rxd1", "Rxd1!", "Rxd1!!", "Rxd1?", "Rxd1??", "Rxd1!?", "Rxd1?!",
                 "Rxd1+", "Rxd1+!", "Rxd1+!!", "Rxd1+?", "Rxd1+??", "Rxd1+!?", "Rxd1+?!",
-                "Rxd1++", "Rxd1#",
+                "Rxd1++", "Rxd1#"
             };
 
             ActAndAssert(ChessRegex2.RookCaptures, expected);
@@ -129,7 +128,7 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "Raxd1", "Raxd1!", "Raxd1!!", "Raxd1?", "Raxd1??", "Raxd1!?", "Raxd1?!",
                 "Raxd1+", "Raxd1+!", "Raxd1+!!", "Raxd1+?", "Raxd1+??", "Raxd1+!?", "Raxd1+?!",
-                "Raxd1++", "Raxd1#",
+                "Raxd1++", "Raxd1#"
             };
 
             ActAndAssert(ChessRegex2.RookCapturesFromFile, expected);
@@ -143,10 +142,122 @@ namespace Software64.ChessRegex.UnitTest
             {
                 "R5xd1", "R5xd1!", "R5xd1!!", "R5xd1?", "R5xd1??", "R5xd1!?", "R5xd1?!",
                 "R5xd1+", "R5xd1+!", "R5xd1+!!", "R5xd1+?", "R5xd1+??", "R5xd1+!?", "R5xd1+?!",
-                "R5xd1++", "R5xd1#",
+                "R5xd1++", "R5xd1#"
             };
 
             ActAndAssert(ChessRegex2.RookCapturesFromRank, expected);
+        }
+
+        [Test]
+        public void Knight_moves_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nd5", "Nd5!", "Nd5!!", "Nd5?", "Nd5??", "Nd5!?", "Nd5?!",
+                "Nd5+", "Nd5+!", "Nd5+!!", "Nd5+?", "Nd5+??", "Nd5+!?", "Nd5+?!",
+                "Nd5++", "Nd5#"
+            };
+
+            ActAndAssert(ChessRegex2.KnightMoves, expected);
+        }
+
+        [Test]
+        public void Knight_moves_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Ncd5", "Ncd5!", "Ncd5!!", "Ncd5?", "Ncd5??", "Ncd5!?", "Ncd5?!",
+                "Ncd5+", "Ncd5+!", "Ncd5+!!", "Ncd5+?", "Ncd5+??", "Ncd5+!?", "Ncd5+?!",
+                "Ncd5++", "Ncd5#"
+            };
+
+            ActAndAssert(ChessRegex2.KnightMovesFromFile, expected);
+        }
+
+        [Test]
+        public void Knight_moves_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "N7d5", "N7d5!", "N7d5!!", "N7d5?", "N7d5??", "N7d5!?", "N7d5?!",
+                "N7d5+", "N7d5+!", "N7d5+!!", "N7d5+?", "N7d5+??", "N7d5+!?", "N7d5+?!",
+                "N7d5++", "N7d5#"
+            };
+
+            ActAndAssert(ChessRegex2.KnightMovesFromRank, expected);
+        }
+
+        [Test]
+        public void Knight_moves_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nc7d5", "Nc7d5!", "Nc7d5!!", "Nc7d5?", "Nc7d5??", "Nc7d5!?", "Nc7d5?!",
+                "Nc7d5+", "Nc7d5+!", "Nc7d5+!!", "Nc7d5+?", "Nc7d5+??", "Nc7d5+!?", "Nc7d5+?!",
+                "Nc7d5++", "Nc7d5#"
+            };
+
+            ActAndAssert(ChessRegex2.KnightMovesFromSquare, expected);
+        }
+
+        [Test]
+        public void Knight_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nxd5", "Nxd5!", "Nxd5!!", "Nxd5?", "Nxd5??", "Nxd5!?", "Nxd5?!",
+                "Nxd5+", "Nxd5+!", "Nxd5+!!", "Nxd5+?", "Nxd5+??", "Nxd5+!?", "Nxd5+?!",
+                "Nxd5++", "Nxd5#"
+            };
+
+            ActAndAssert(ChessRegex2.KnightCaptures, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Ncxd5", "Ncxd5!", "Ncxd5!!", "Ncxd5?", "Ncxd5??", "Ncxd5!?", "Ncxd5?!",
+                "Ncxd5+", "Ncxd5+!", "Ncxd5+!!", "Ncxd5+?", "Ncxd5+??", "Ncxd5+!?", "Ncxd5+?!",
+                "Ncxd5++", "Ncxd5#",
+            };
+
+            ActAndAssert(ChessRegex2.KnightCapturesFromFile, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "N7xd5", "N7xd5!", "N7xd5!!", "N7xd5?", "N7xd5??", "N7xd5!?", "N7xd5?!",
+                "N7xd5+", "N7xd5+!", "N7xd5+!!", "N7xd5+?", "N7xd5+??", "N7xd5+!?", "N7xd5+?!",
+                "N7xd5++", "N7xd5#",
+            };
+
+            ActAndAssert(ChessRegex2.KnightCapturesFromRank, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nc7xd5", "Nc7xd5!", "Nc7xd5!!", "Nc7xd5?", "Nc7xd5??", "Nc7xd5!?", "Nc7xd5?!",
+                "Nc7xd5+", "Nc7xd5+!", "Nc7xd5+!!", "Nc7xd5+?", "Nc7xd5+??", "Nc7xd5+!?", "Nc7xd5+?!",
+                "Nc7xd5++", "Nc7xd5#",
+            };
+
+            ActAndAssert(ChessRegex2.KnightCapturesFromSquare, expected);
         }
 
         private static void ActAndAssert(string pattern, List<string> expected)
