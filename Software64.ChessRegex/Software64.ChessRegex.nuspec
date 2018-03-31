@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>osotorrio</authors>
     <owners>osotorrio</owners>
-    <projectUrl>https://github.com/osotorrio/chessmen</projectUrl>
+    <projectUrl>https://github.com/osotorrio/chessregex</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Collection of regular expressions for all kind of chess moves.</description>
     <releaseNotes>Updated intellisense XML documentation. All examples now are Knight moves.</releaseNotes>
