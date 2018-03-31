@@ -212,5 +212,69 @@
         /// "Bh7xe4++", "Bh7xe4#"
         /// </summary>
         public static string BishopCapturesFromSquare => @"^(B[a-h][1-8]x[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Qd5", "Qd5!", "Qd5!!", "Qd5?", "Qd5??", "Qd5!?", "Qd5?!",
+        /// "Qd5+", "Qd5+!", "Qd5+!!", "Qd5+?", "Qd5+??", "Qd5+!?", "Qd5+?!",
+        /// "Qd5++", "Qd5#"
+        /// </summary>
+        public static string QueenMoves => @"^(Q[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Qad5", "Qad5!", "Qad5!!", "Qad5?", "Qad5??", "Qad5!?", "Qad5?!",
+        /// "Qad5+", "Qad5+!", "Qad5+!!", "Qad5+?", "Qad5+??", "Qad5+!?", "Qad5+?!",
+        /// "Qad5++", "Qad5#"
+        /// </summary>
+        public static string QueenMovesFromFile => @"^(Q[a-h][a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Q2d5", "Q2d5!", "Q2d5!!", "Q2d5?", "Q2d5??", "Q2d5!?", "Q2d5?!",
+        /// "Q2d5+", "Q2d5+!", "Q2d5+!!", "Q2d5+?", "Q2d5+??", "Q2d5+!?", "Q2d5+?!",
+        /// "Q2d5++", "Q2d5#"
+        /// </summary>
+        public static string QueenMovesFromRank => @"^(Q[1-8][a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Qa2d5", "Qa2d5!", "Qa2d5!!", "Qa2d5?", "Qa2d5??", "Qa2d5!?", "Qa2d5?!",
+        /// "Qa2d5+", "Qa2d5+!", "Qa2d5+!!", "Qa2d5+?", "Qa2d5+??", "Qa2d5+!?", "Qa2d5+?!",
+        /// "Qa2d5++", "Qa2d5#"
+        /// </summary>
+        public static string QueenMovesFromSquare => @"^(Q[a-h][1-8][a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Qxd5", "Qxd5!", "Qxd5!!", "Qxd5?", "Qxd5??", "Qxd5!?", "Qxd5?!",
+        /// "Qxd5+", "Qxd5+!", "Qxd5+!!", "Qxd5+?", "Qxd5+??", "Qxd5+!?", "Qxd5+?!",
+        /// "Qxd5++", "Qxd5#"
+        /// </summary>
+        public static string QueenCaptures => @"^(Qx[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Qaxd5", "Qaxd5!", "Qaxd5!!", "Qaxd5?", "Qaxd5??", "Qaxd5!?", "Qaxd5?!",
+        /// "Qaxd5+", "Qaxd5+!", "Qaxd5+!!", "Qaxd5+?", "Qaxd5+??", "Qaxd5+!?", "Qaxd5+?!",
+        /// "Qaxd5++", "Qaxd5#"
+        /// </summary>
+        public static string QueenCapturesFromFile => @"^(Q[a-h]x[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Q2xd5", "Q2xd5!", "Q2xd5!!", "Q2xd5?", "Q2xd5??", "Q2xd5!?", "Q2xd5?!",
+        /// "Q2xd5+", "Q2xd5+!", "Q2xd5+!!", "Q2xd5+?", "Q2xd5+??", "Q2xd5+!?", "Q2xd5+?!",
+        /// "Q2xd5++", "Q2xd5#"
+        /// </summary>
+        public static string QueenCapturesFromRank => @"^(Q[1-8]x[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Qa2xd5", "Qa2xd5!", "Qa2xd5!!", "Qa2xd5?", "Qa2xd5??", "Qa2xd5!?", "Qa2xd5?!",
+        /// "Qa2xd5+", "Qa2xd5+!", "Qa2xd5+!!", "Qa2xd5+?", "Qa2xd5+??", "Qa2xd5+!?", "Qa2xd5+?!",
+        /// "Qa2xd5++", "Qa2xd5#"
+        /// </summary>
+        public static string QueenCapturesFromSquare => @"^(Q[a-h][1-8]x[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
     }
 }
