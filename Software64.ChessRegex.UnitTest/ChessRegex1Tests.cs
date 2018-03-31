@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Software64.ChessRegex.UnitTest
 {
     [TestFixture]
-    public class WhoMovedTests
+    public class ChessRegex1Tests
     {
         [Test]
         public void Pawn_moves_test()
@@ -28,7 +28,7 @@ namespace Software64.ChessRegex.UnitTest
                 "dxe8=Q#"
             };
 
-            ActAndAssert(WhoMoved.Pawn, expected);
+            ActAndAssert(ChessRegex1.Pawn, expected);
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace Software64.ChessRegex.UnitTest
                 "R5xd1#",
             };
 
-            ActAndAssert(WhoMoved.Rook, expected);
+            ActAndAssert(ChessRegex1.Rook, expected);
         }
 
         [Test]
@@ -92,7 +92,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Nc7xd5#",
             };
 
-            ActAndAssert(WhoMoved.Knight, expected);
+            ActAndAssert(ChessRegex1.Knight, expected);
         }
 
         [Test]
@@ -127,7 +127,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bh7xe4#",
             };
 
-            ActAndAssert(WhoMoved.Bishop, expected);
+            ActAndAssert(ChessRegex1.Bishop, expected);
         }
 
         [Test]
@@ -162,7 +162,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qa2xd5#",
             };
 
-            ActAndAssert(WhoMoved.Queen, expected);
+            ActAndAssert(ChessRegex1.Queen, expected);
         }
 
         [Test]
@@ -179,7 +179,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Kxd1#",
             };
 
-            ActAndAssert(WhoMoved.King, expected);
+            ActAndAssert(ChessRegex1.King, expected);
         }
 
         [Test]
@@ -193,7 +193,7 @@ namespace Software64.ChessRegex.UnitTest
                 "O-O#"
             };
 
-            ActAndAssert(WhoMoved.CastledKingSide, expected);
+            ActAndAssert(ChessRegex1.CastledKingSide, expected);
         }
 
         [Test]
@@ -207,7 +207,7 @@ namespace Software64.ChessRegex.UnitTest
                 "O-O-O#"
             };
 
-            ActAndAssert(WhoMoved.CastledQueenSide, expected);
+            ActAndAssert(ChessRegex1.CastledQueenSide, expected);
         }
 
         private static void ActAndAssert(string pattern, List<string> expected)

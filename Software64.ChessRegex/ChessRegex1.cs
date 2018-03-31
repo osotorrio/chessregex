@@ -3,7 +3,7 @@
     /// <summary>
     /// It contains regular expressions which match pieces moves
     /// </summary>
-    public static class WhoMoved
+    public static class ChessRegex1
     {
         /// <summary>
         /// It matches when a Pawn is moved

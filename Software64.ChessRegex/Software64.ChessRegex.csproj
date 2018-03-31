@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WhatMove.cs" />
+    <Compile Include="ChessRegex2.cs" />
+    <Compile Include="ChessRegex3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WhoMoved.cs" />
+    <Compile Include="ChessRegex1.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

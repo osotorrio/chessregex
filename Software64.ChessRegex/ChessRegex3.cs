@@ -3,7 +3,7 @@
     /// <summary>
     /// It contains regular expressions which match specific type of moves
     /// </summary>
-    public static class WhatMove
+    public static class ChessRegex3
     {
         /// <summary>
         /// It matches the following type of moves: e4, e4!, e4!!, e4?, e4??, e4!?, e4?!
