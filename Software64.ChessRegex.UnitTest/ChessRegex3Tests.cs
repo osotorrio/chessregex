@@ -189,7 +189,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_file_test()
+        public void Knight_moves_from_file_test()
         {
             // Arrange
             var expected = new List<string>
@@ -201,7 +201,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_file_with_check_test()
+        public void Knight_moves_from_file_with_check_test()
         {
             // Arrange
             var expected = new List<string>
@@ -213,7 +213,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_file_with_checkmate_test()
+        public void Knight_moves_from_file_with_checkmate_test()
         {
             // Arrange
             var expected = new List<string>
@@ -225,7 +225,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_rank_test()
+        public void Knight_moves_from_rank_test()
         {
             // Arrange
             var expected = new List<string>
@@ -237,7 +237,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_rank_with_check_test()
+        public void Knight_moves_from_rank_with_check_test()
         {
             // Arrange
             var expected = new List<string>
@@ -249,7 +249,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_rank_with_checkmate_test()
+        public void Knight_moves_from_rank_with_checkmate_test()
         {
             // Arrange
             var expected = new List<string>
@@ -261,7 +261,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_square_test()
+        public void Knight_moves_from_square_test()
         {
             // Arrange
             var expected = new List<string>
@@ -273,7 +273,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_Square_with_check_test()
+        public void Knight_moves_from_square_with_check_test()
         {
             // Arrange
             var expected = new List<string>
@@ -285,7 +285,7 @@ namespace Software64.ChessRegex.UnitTest
         }
 
         [Test]
-        public void Knight_moves__from_Square_with_checkmate_test()
+        public void Knight_moves_from_square_with_checkmate_test()
         {
             // Arrange
             var expected = new List<string>
@@ -294,6 +294,150 @@ namespace Software64.ChessRegex.UnitTest
             };
 
             AssertPatternReturnsExpected(ChessRegex3.KnightMovesFromSquareCheckmate, expected);
+        }
+
+        [Test]
+        public void Knight_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nxd5", "Nxd5!", "Nxd5!!", "Nxd5?", "Nxd5??", "Nxd5!?", "Nxd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCaptures, expected);
+        }
+
+        [Test]
+        public void Knight_captures_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nxd5+", "Nxd5+!", "Nxd5+!!", "Nxd5+?", "Nxd5+??", "Nxd5+!?", "Nxd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesCheck, expected);
+        }
+
+        [Test]
+        public void Knight_captures_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nxd5++", "Nxd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesCheckmate, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Ncxd5", "Ncxd5!", "Ncxd5!!", "Ncxd5?", "Ncxd5??", "Ncxd5!?", "Ncxd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromFile, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Ncxd5+", "Ncxd5+!", "Ncxd5+!!", "Ncxd5+?", "Ncxd5+??", "Ncxd5+!?", "Ncxd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromFileCheck, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Ncxd5++", "Ncxd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "N7xd5", "N7xd5!", "N7xd5!!", "N7xd5?", "N7xd5??", "N7xd5!?", "N7xd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromRank, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "N7xd5+", "N7xd5+!", "N7xd5+!!", "N7xd5+?", "N7xd5+??", "N7xd5+!?", "N7xd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "N7xd5++", "N7xd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromRankCheckmate, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nc7xd5", "Nc7xd5!", "Nc7xd5!!", "Nc7xd5?", "Nc7xd5??", "Nc7xd5!?", "Nc7xd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromSquare, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_square_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nc7xd5+", "Nc7xd5+!", "Nc7xd5+!!", "Nc7xd5+?", "Nc7xd5+??", "Nc7xd5+!?", "Nc7xd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromSquareCheck, expected);
+        }
+
+        [Test]
+        public void Knight_captures_from_square_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Nc7xd5++", "Nc7xd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromSquareCheckmate, expected);
         }
 
         [Test]

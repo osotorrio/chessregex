@@ -124,21 +124,66 @@
         /// It matches the following type of moves: "Nc7d5++", "Nc7d5#"
         /// </summary>
         public static string KnightMovesFromSquareCheckmate => @"^(N[a-h][1-8][a-h][1-8](\+{2}|#))$";
+        
+        /// <summary>
+        /// It matches the following type of moves: "Nxd5", "Nxd5!", "Nxd5!!", "Nxd5?", "Nxd5??", "Nxd5!?", "Nxd5?!"
+        /// </summary>
+        public static string KnightCaptures => @"^(Nx[a-h][1-8]([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Nxd5+", "Nxd5+!", "Nxd5+!!", "Nxd5+?", "Nxd5+??", "Nxd5+!?", "Nxd5+?!"
+        /// </summary>
+        public static string KnightCapturesCheck => @"^(Nx[a-h][1-8](\+)([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Nxd5++", "Nxd5#"
+        /// </summary>
+        public static string KnightCapturesCheckmate => @"^(Nx[a-h][1-8](\+{2}|#))$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Ncxd5", "Ncxd5!", "Ncxd5!!", "Ncxd5?", "Ncxd5??", "Ncxd5!?", "Ncxd5?!"
+        /// </summary>
+        public static string KnightCapturesFromFile => @"^(N[a-h]x[a-h][1-8]([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Ncxd5+", "Ncxd5+!", "Ncxd5+!!", "Ncxd5+?", "Ncxd5+??", "Ncxd5+!?", "Ncxd5+?!"
+        /// </summary>
+        public static string KnightCapturesFromFileCheck => @"^(N[a-h]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Ncxd5++", "Ncxd5#"
+        /// </summary>
+        public static string KnightCapturesFromFileCheckmate => @"^(N[a-h]x[a-h][1-8](\+{2}|#))$";
 
+        /// <summary>
+        /// It matches the following type of moves: "N7xd5", "N7xd5!", "N7xd5!!", "N7xd5?", "N7xd5??", "N7xd5!?", "N7xd5?!"
+        /// </summary>
+        public static string KnightCapturesFromRank => @"^(N[1-8]x[a-h][1-8]([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "N7xd5+", "N7xd5+!", "N7xd5+!!", "N7xd5+?", "N7xd5+??", "N7xd5+!?", "N7xd5+?!"
+        /// </summary>
+        public static string KnightCapturesFromRankCheck => @"^(N[1-8]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "N7xd5++", "N7xd5#"
+        /// </summary>
+        public static string KnightCapturesFromRankCheckmate => @"^(N[1-8]x[a-h][1-8](\+{2}|#))$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Nc7xd5", "Nc7xd5!", "Nc7xd5!!", "Nc7xd5?", "Nc7xd5??", "Nc7xd5!?", "Nc7xd5?!"
+        /// </summary>
+        public static string KnightCapturesFromSquare => @"^(N[a-h][1-8]x[a-h][1-8]([\!\?]{1,2})?)$";
 
+        /// <summary>
+        /// It matches the following type of moves: "Nc7xd5+", "Nc7xd5+!", "Nc7xd5+!!", "Nc7xd5+?", "Nc7xd5+??", "Nc7xd5+!?", "Nc7xd5+?!"
+        /// </summary>
+        public static string KnightCapturesFromSquareCheck => @"^(N[a-h][1-8]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
 
-
-
-
-
+        /// <summary>
+        /// It matches the following type of moves: "Nc7xd5++", "Nc7xd5#"
+        /// </summary>
+        public static string KnightCapturesFromSquareCheckmate => @"^(N[a-h][1-8]x[a-h][1-8](\+{2}|#))$";
 
         /// <summary>
         /// It matches the following type of moves:  "O-O", "O-O!", "O-O!!", "O-O?", "O-O??", "O-O!?", "O-O?!"
