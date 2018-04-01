@@ -1,7 +1,7 @@
 ﻿namespace Software64.ChessRegex
 {
     /// <summary>
-    /// It contains regular expressions which match pieces moves Level 2
+    /// It contains regular expressions which match pieces moves on Level 2.
     /// </summary>
     public static class ChessRegex2
     {
