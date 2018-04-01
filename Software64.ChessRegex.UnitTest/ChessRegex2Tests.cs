@@ -484,6 +484,34 @@ namespace Software64.ChessRegex.UnitTest
             ActAndAssert(ChessRegex2.QueenCapturesFromSquare, expected);
         }
 
+        [Test]
+        public void King_moves_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kd1", "Kd1!", "Kd1!!", "Kd1?", "Kd1??", "Kd1!?", "Kd1?!",
+                "Kd1+", "Kd1+!", "Kd1+!!", "Kd1+?", "Kd1+??", "Kd1+!?", "Kd1+?!",
+                "Kd1++", "Kd1#"
+            };
+
+            ActAndAssert(ChessRegex2.KingMoves, expected);
+        }
+
+        [Test]
+        public void King_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kxd1", "Kxd1!", "Kxd1!!", "Kxd1?", "Kxd1??", "Kxd1!?", "Kxd1?!",
+                "Kxd1+", "Kxd1+!", "Kxd1+!!", "Kxd1+?", "Kxd1+??", "Kxd1+!?", "Kxd1+?!",
+                "Kxd1++", "Kxd1#"
+            };
+
+            ActAndAssert(ChessRegex2.KingCaptures, expected);
+        }
+
         private static void ActAndAssert(string pattern, List<string> expected)
         {
             // Act

@@ -276,5 +276,21 @@
         /// "Qa2xd5++", "Qa2xd5#"
         /// </summary>
         public static string QueenCapturesFromSquare => @"^(Q[a-h][1-8]x[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Kd1", "Kd1!", "Kd1!!", "Kd1?", "Kd1??", "Kd1!?", "Kd1?!",
+        /// "Kd1+", "Kd1+!", "Kd1+!!", "Kd1+?", "Kd1+??", "Kd1+!?", "Kd1+?!",
+        /// "Kd1++", "Kd1#"
+        /// </summary>
+        public static string KingMoves => @"^(K[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "Kxd1", "Kxd1!", "Kxd1!!", "Kxd1?", "Kxd1??", "Kxd1!?", "Kxd1?!",
+        /// "Kxd1+", "Kxd1+!", "Kxd1+!!", "Kxd1+?", "Kxd1+??", "Kxd1+!?", "Kxd1+?!",
+        /// "Kxd1++", "Kxd1#"
+        /// </summary>
+        public static string KingCaptures => @"^(Kx[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
     }
 }
