@@ -66,6 +66,96 @@
         public static string PawnCapturesPromotesCheckmate => @"^([a-h]x[a-h][1-8](\=[RNBQ])(\+{2}|#))$";
 
         /// <summary>
+        /// It matches the following type of moves: "Rd1", "Rd1!", "Rd1!!", "Rd1?", "Rd1??", "Rd1!?", "Rd1?!"
+        /// </summary>
+        public static string RookMoves => @"^(R[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rd1+", "Rd1+!", "Rd1+!!", "Rd1+?", "Rd1+??", "Rd1+!?", "Rd1+?!"
+        /// </summary>
+        public static string RookMovesCheck => @"^(R[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rd1++", "Rd1#"
+        /// </summary>
+        public static string RookMovesCheckmate => @"^(R[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rad1", "Rad1!", "Rad1!!", "Rad1?", "Rad1??", "Rad1!?", "Rad1?!"
+        /// </summary>
+        public static string RookMovesFromFile => @"^(R[a-h][a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rad1+", "Rad1+!", "Rad1+!!", "Rad1+?", "Rad1+??", "Rad1+!?", "Rad1+?!"
+        /// </summary>
+        public static string RookMovesFromFileCheck => @"^(R[a-h][a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rad1++", "Rad1#"
+        /// </summary>
+        public static string RookMovesFromFileCheckmate => @"^(R[a-h][a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "R5d1", "R5d1!", "R5d1!!", "R5d1?", "R5d1??", "R5d1!?", "R5d1?!"
+        /// </summary>
+        public static string RookMovesFromRank => @"^(R[1-8][a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "R5d1+", "R5d1+!", "R5d1+!!", "R5d1+?", "R5d1+??", "R5d1+!?", "R5d1+?!"
+        /// </summary>
+        public static string RookMovesFromRankCheck => @"^(R[1-8][a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "R5d1++", "R5d1#"
+        /// </summary>
+        public static string RookMovesFromRankCheckmate => @"^(R[1-8][a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rxd1", "Rxd1!", "Rxd1!!", "Rxd1?", "Rxd1??", "Rxd1!?", "Rxd1?!"
+        /// </summary>
+        public static string RookCaptures => @"^(Rx[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rxd1+", "Rxd1+!", "Rxd1+!!", "Rxd1+?", "Rxd1+??", "Rxd1+!?", "Rxd1+?!"
+        /// </summary>
+        public static string RookCapturesCheck => @"^(Rx[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Rxd1++", "Rxd1#"
+        /// </summary>
+        public static string RookCapturesCheckmate => @"^(Rx[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Raxd1", "Raxd1!", "Raxd1!!", "Raxd1?", "Raxd1??", "Raxd1!?", "Raxd1?!"
+        /// </summary>
+        public static string RookCapturesFromFile => @"^(R[a-h]x[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Raxd1+", "Raxd1+!", "Raxd1+!!", "Raxd1+?", "Raxd1+??", "Raxd1+!?", "Raxd1+?!"
+        /// </summary>
+        public static string RookCapturesFromFileCheck => @"^(R[a-h]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Raxd1++", "Raxd1#"
+        /// </summary>
+        public static string RookCapturesFromFileCheckmate => @"^(R[a-h]x[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "R5xd1", "R5xd1!", "R5xd1!!", "R5xd1?", "R5xd1??", "R5xd1!?", "R5xd1?!"
+        /// </summary>
+        public static string RookCapturesFromRank => @"^(R[1-8]x[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "R5xd1+", "R5xd1+!", "R5xd1+!!", "R5xd1+?", "R5xd1+??", "R5xd1+!?", "R5xd1+?!"
+        /// </summary>
+        public static string RookCapturesFromRankCheck => @"^(R[1-8]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "R5xd1++", "R5xd1#"
+        /// </summary>
+        public static string RookCapturesFromRankCheckmate => @"^(R[1-8]x[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
         /// It matches the following type of moves: "Nd5", "Nd5!", "Nd5!!", "Nd5?", "Nd5??", "Nd5!?", "Nd5?!"
         /// </summary>
         public static string KnightMoves => @"^(N[a-h][1-8]([\!\?]{1,2})?)$";

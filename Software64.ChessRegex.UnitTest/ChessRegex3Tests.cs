@@ -151,7 +151,223 @@ namespace Software64.ChessRegex.UnitTest
 
             AssertPatternReturnsExpected(ChessRegex3.PawnCapturesPromotesCheckmate, expected);
         }
-        
+
+        [Test]
+        public void Rook_moves_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rd1", "Rd1!", "Rd1!!", "Rd1?", "Rd1??", "Rd1!?", "Rd1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMoves, expected);
+        }
+
+        [Test]
+        public void Rook_moves_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rd1+", "Rd1+!", "Rd1+!!", "Rd1+?", "Rd1+??", "Rd1+!?", "Rd1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesCheck, expected);
+        }
+
+        [Test]
+        public void Rook_moves_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rd1++", "Rd1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesCheckmate, expected);
+        }
+
+        [Test]
+        public void Rook_moves_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rad1", "Rad1!", "Rad1!!", "Rad1?", "Rad1??", "Rad1!?", "Rad1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesFromFile, expected);
+        }
+
+        [Test]
+        public void Rook_moves_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rad1+", "Rad1+!", "Rad1+!!", "Rad1+?", "Rad1+??", "Rad1+!?", "Rad1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesFromFileCheck, expected);
+        }
+
+        [Test]
+        public void Rook_moves_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rad1++", "Rad1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Rook_moves_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "R5d1", "R5d1!", "R5d1!!", "R5d1?", "R5d1??", "R5d1!?", "R5d1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesFromRank, expected);
+        }
+
+        [Test]
+        public void Rook_moves_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "R5d1+", "R5d1+!", "R5d1+!!", "R5d1+?", "R5d1+??", "R5d1+!?", "R5d1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Rook_moves_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "R5d1++", "R5d1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookMovesFromRankCheckmate, expected);
+        }
+
+        [Test]
+        public void Rook_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rxd1", "Rxd1!", "Rxd1!!", "Rxd1?", "Rxd1??", "Rxd1!?", "Rxd1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCaptures, expected);
+        }
+
+        [Test]
+        public void Rook_captures_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rxd1+", "Rxd1+!", "Rxd1+!!", "Rxd1+?", "Rxd1+??", "Rxd1+!?", "Rxd1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesCheck, expected);
+        }
+
+        [Test]
+        public void Rook_captures_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Rxd1++", "Rxd1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesCheckmate, expected);
+        }
+
+        [Test]
+        public void Rook_captures_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Raxd1", "Raxd1!", "Raxd1!!", "Raxd1?", "Raxd1??", "Raxd1!?", "Raxd1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesFromFile, expected);
+        }
+
+        [Test]
+        public void Rook_captures_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Raxd1+", "Raxd1+!", "Raxd1+!!", "Raxd1+?", "Raxd1+??", "Raxd1+!?", "Raxd1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesFromFileCheck, expected);
+        }
+
+        [Test]
+        public void Rook_captures_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Raxd1++", "Raxd1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Rook_captures_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "R5xd1", "R5xd1!", "R5xd1!!", "R5xd1?", "R5xd1??", "R5xd1!?", "R5xd1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesFromRank, expected);
+        }
+
+        [Test]
+        public void Rook_captures_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "R5xd1+", "R5xd1+!", "R5xd1+!!", "R5xd1+?", "R5xd1+??", "R5xd1+!?", "R5xd1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Rook_captures_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "R5xd1++", "R5xd1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.RookCapturesFromRankCheckmate, expected);
+        }
+
         [Test]
         public void Knight_moves_test()
         {
