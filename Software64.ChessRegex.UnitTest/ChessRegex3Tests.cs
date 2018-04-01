@@ -655,16 +655,7 @@ namespace Software64.ChessRegex.UnitTest
 
             AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromSquareCheckmate, expected);
         }
-
-
-
-
-
-
-
-
-
-
+        
         [Test]
         public void Bishop_moves_test()
         {
@@ -952,16 +943,295 @@ namespace Software64.ChessRegex.UnitTest
 
             AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromSquareCheckmate, expected);
         }
+        
+        [Test]
+        public void Queen_moves_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qd5", "Qd5!", "Qd5!!", "Qd5?", "Qd5??", "Qd5!?", "Qd5?!"
+            };
 
+            AssertPatternReturnsExpected(ChessRegex3.QueenMoves, expected);
+        }
 
+        [Test]
+        public void Queen_moves_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qd5+", "Qd5+!", "Qd5+!!", "Qd5+?", "Qd5+??", "Qd5+!?", "Qd5+?!"
+            };
 
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesCheck, expected);
+        }
 
+        [Test]
+        public void Queen_moves_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qd5++", "Qd5#"
+            };
 
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesCheckmate, expected);
+        }
 
+        [Test]
+        public void Queen_moves_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qad5", "Qad5!", "Qad5!!", "Qad5?", "Qad5??", "Qad5!?", "Qad5?!"
+            };
 
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromFile, expected);
+        }
 
+        [Test]
+        public void Queen_moves_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qad5+", "Qad5+!", "Qad5+!!", "Qad5+?", "Qad5+??", "Qad5+!?", "Qad5+?!"
+            };
 
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromFileCheck, expected);
+        }
 
+        [Test]
+        public void Queen_moves_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qad5++", "Qad5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Queen_moves_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Q2d5", "Q2d5!", "Q2d5!!", "Q2d5?", "Q2d5??", "Q2d5!?", "Q2d5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromRank, expected);
+        }
+
+        [Test]
+        public void Queen_moves_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Q2d5+", "Q2d5+!", "Q2d5+!!", "Q2d5+?", "Q2d5+??", "Q2d5+!?", "Q2d5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Queen_moves_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Q2d5++", "Q2d5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromRankCheckmate, expected);
+        }
+
+        [Test]
+        public void Queen_moves_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qa2d5", "Qa2d5!", "Qa2d5!!", "Qa2d5?", "Qa2d5??", "Qa2d5!?", "Qa2d5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromSquare, expected);
+        }
+
+        [Test]
+        public void Queen_moves_from_square_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qa2d5+", "Qa2d5+!", "Qa2d5+!!", "Qa2d5+?", "Qa2d5+??", "Qa2d5+!?", "Qa2d5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromSquareCheck, expected);
+        }
+
+        [Test]
+        public void Queen_moves_from_square_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qa2d5++", "Qa2d5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenMovesFromSquareCheckmate, expected);
+        }
+
+        [Test]
+        public void Queen_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qxd5", "Qxd5!", "Qxd5!!", "Qxd5?", "Qxd5??", "Qxd5!?", "Qxd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCaptures, expected);
+        }
+
+        [Test]
+        public void Queen_captures_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qxd5+", "Qxd5+!", "Qxd5+!!", "Qxd5+?", "Qxd5+??", "Qxd5+!?", "Qxd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesCheck, expected);
+        }
+
+        [Test]
+        public void Queen_captures_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qxd5++", "Qxd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesCheckmate, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qaxd5", "Qaxd5!", "Qaxd5!!", "Qaxd5?", "Qaxd5??", "Qaxd5!?", "Qaxd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromFile, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qaxd5+", "Qaxd5+!", "Qaxd5+!!", "Qaxd5+?", "Qaxd5+??", "Qaxd5+!?", "Qaxd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromFileCheck, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Qaxd5++", "Qaxd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Q2xd5", "Q2xd5!", "Q2xd5!!", "Q2xd5?", "Q2xd5??", "Q2xd5!?", "Q2xd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromRank, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Q2xd5+", "Q2xd5+!", "Q2xd5+!!", "Q2xd5+?", "Q2xd5+??", "Q2xd5+!?", "Q2xd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Q2xd5++", "Q2xd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromRankCheckmate, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qa2xd5", "Qa2xd5!", "Qa2xd5!!", "Qa2xd5?", "Qa2xd5??", "Qa2xd5!?", "Qa2xd5?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromSquare, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_square_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qa2xd5+", "Qa2xd5+!", "Qa2xd5+!!", "Qa2xd5+?", "Qa2xd5+??", "Qa2xd5+!?", "Qa2xd5+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromSquareCheck, expected);
+        }
+
+        [Test]
+        public void Queen_captures_from_square_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Qa2xd5++", "Qa2xd5#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.QueenCapturesFromSquareCheckmate, expected);
+        }
+        
         [Test]
         public void Castling_kingside_test()
         {
