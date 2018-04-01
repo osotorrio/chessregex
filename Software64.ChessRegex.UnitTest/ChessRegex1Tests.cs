@@ -28,7 +28,7 @@ namespace Software64.ChessRegex.UnitTest
                 "dxe8=Q++", "dxe8=Q#"
             };
 
-            ActAndAssert(ChessRegex1.Pawn, expected);
+            AssertPatternReturnsExpected(ChessRegex1.PawnMoves, expected);
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace Software64.ChessRegex.UnitTest
                 "R5xd1++", "R5xd1#"
             };
 
-            ActAndAssert(ChessRegex1.Rook, expected);
+            AssertPatternReturnsExpected(ChessRegex1.RookMoves, expected);
         }
 
         [Test]
@@ -92,7 +92,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Nc7xd5++", "Nc7xd5#"
             };
 
-            ActAndAssert(ChessRegex1.Knight, expected);
+            AssertPatternReturnsExpected(ChessRegex1.KnightMoves, expected);
         }
 
         [Test]
@@ -127,7 +127,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bh7xe4++", "Bh7xe4#",
             };
 
-            ActAndAssert(ChessRegex1.Bishop, expected);
+            AssertPatternReturnsExpected(ChessRegex1.BishopMoves, expected);
         }
 
         [Test]
@@ -162,7 +162,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qa2xd5++", "Qa2xd5#",
             };
 
-            ActAndAssert(ChessRegex1.Queen, expected);
+            AssertPatternReturnsExpected(ChessRegex1.QueenMoves, expected);
         }
 
         [Test]
@@ -179,7 +179,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Kxd1++", "Kxd1#"
             };
 
-            ActAndAssert(ChessRegex1.King, expected);
+            AssertPatternReturnsExpected(ChessRegex1.KingMoves, expected);
         }
 
         [Test]
@@ -196,10 +196,10 @@ namespace Software64.ChessRegex.UnitTest
                 "O-O-O++", "O-O-O#"
             };
 
-            ActAndAssert(ChessRegex1.Castled, expected);
+            AssertPatternReturnsExpected(ChessRegex1.Castled, expected);
         }
 
-        private static void ActAndAssert(string pattern, List<string> expected)
+        private static void AssertPatternReturnsExpected(string pattern, List<string> expected)
         {
             // Act
             var actual = TestFixture.MoveExamples.Where(move => Regex.IsMatch(move, pattern)).ToList();

@@ -19,7 +19,7 @@ namespace Software64.ChessRegex.UnitTest
                 "e4++", "e4#"
             };
 
-            ActAndAssert(ChessRegex2.PawnMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex2.PawnMoves, expected);
         }
 
         [Test]
@@ -33,7 +33,7 @@ namespace Software64.ChessRegex.UnitTest
                 "e8=Q++", "e8=Q#"
             };
 
-            ActAndAssert(ChessRegex2.PawnPromotes, expected);
+            AssertPatternReturnsExpected(ChessRegex2.PawnPromotes, expected);
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace Software64.ChessRegex.UnitTest
                 "dxe4++", "dxe4#"
             };
 
-            ActAndAssert(ChessRegex2.PawnCaptures, expected);
+            AssertPatternReturnsExpected(ChessRegex2.PawnCaptures, expected);
         }
 
         [Test]
@@ -61,7 +61,7 @@ namespace Software64.ChessRegex.UnitTest
                 "dxe8=Q++", "dxe8=Q#"
             };
 
-            ActAndAssert(ChessRegex2.PawnCapturesPromotes, expected);
+            AssertPatternReturnsExpected(ChessRegex2.PawnCapturesPromotes, expected);
         }
 
         [Test]
@@ -75,7 +75,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Rd1++", "Rd1#"
             };
 
-            ActAndAssert(ChessRegex2.RookMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex2.RookMoves, expected);
         }
 
         [Test]
@@ -89,7 +89,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Rad1++", "Rad1#"
             };
 
-            ActAndAssert(ChessRegex2.RookMovesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.RookMovesFromFile, expected);
         }
 
         [Test]
@@ -103,7 +103,7 @@ namespace Software64.ChessRegex.UnitTest
                 "R5d1++", "R5d1#"
             };
 
-            ActAndAssert(ChessRegex2.RookMovesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.RookMovesFromRank, expected);
         }
 
         [Test]
@@ -117,7 +117,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Rxd1++", "Rxd1#"
             };
 
-            ActAndAssert(ChessRegex2.RookCaptures, expected);
+            AssertPatternReturnsExpected(ChessRegex2.RookCaptures, expected);
         }
 
         [Test]
@@ -131,7 +131,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Raxd1++", "Raxd1#"
             };
 
-            ActAndAssert(ChessRegex2.RookCapturesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.RookCapturesFromFile, expected);
         }
 
         [Test]
@@ -145,7 +145,7 @@ namespace Software64.ChessRegex.UnitTest
                 "R5xd1++", "R5xd1#"
             };
 
-            ActAndAssert(ChessRegex2.RookCapturesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.RookCapturesFromRank, expected);
         }
 
         [Test]
@@ -159,7 +159,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Nd5++", "Nd5#"
             };
 
-            ActAndAssert(ChessRegex2.KnightMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightMoves, expected);
         }
 
         [Test]
@@ -173,7 +173,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Ncd5++", "Ncd5#"
             };
 
-            ActAndAssert(ChessRegex2.KnightMovesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightMovesFromFile, expected);
         }
 
         [Test]
@@ -187,7 +187,7 @@ namespace Software64.ChessRegex.UnitTest
                 "N7d5++", "N7d5#"
             };
 
-            ActAndAssert(ChessRegex2.KnightMovesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightMovesFromRank, expected);
         }
 
         [Test]
@@ -201,7 +201,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Nc7d5++", "Nc7d5#"
             };
 
-            ActAndAssert(ChessRegex2.KnightMovesFromSquare, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightMovesFromSquare, expected);
         }
 
         [Test]
@@ -215,7 +215,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Nxd5++", "Nxd5#"
             };
 
-            ActAndAssert(ChessRegex2.KnightCaptures, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightCaptures, expected);
         }
 
         [Test]
@@ -229,7 +229,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Ncxd5++", "Ncxd5#",
             };
 
-            ActAndAssert(ChessRegex2.KnightCapturesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightCapturesFromFile, expected);
         }
 
         [Test]
@@ -243,7 +243,7 @@ namespace Software64.ChessRegex.UnitTest
                 "N7xd5++", "N7xd5#",
             };
 
-            ActAndAssert(ChessRegex2.KnightCapturesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightCapturesFromRank, expected);
         }
 
         [Test]
@@ -257,7 +257,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Nc7xd5++", "Nc7xd5#",
             };
 
-            ActAndAssert(ChessRegex2.KnightCapturesFromSquare, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KnightCapturesFromSquare, expected);
         }
 
         [Test]
@@ -271,7 +271,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Be4++", "Be4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopMoves, expected);
         }
 
         [Test]
@@ -285,7 +285,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bhe4++", "Bhe4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopMovesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopMovesFromFile, expected);
         }
 
         [Test]
@@ -299,7 +299,7 @@ namespace Software64.ChessRegex.UnitTest
                 "B7e4++", "B7e4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopMovesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopMovesFromRank, expected);
         }
 
         [Test]
@@ -313,7 +313,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bh7e4++", "Bh7e4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopMovesFromSquare, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopMovesFromSquare, expected);
         }
 
         [Test]
@@ -327,7 +327,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bxe4++", "Bxe4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopCaptures, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopCaptures, expected);
         }
 
         [Test]
@@ -341,7 +341,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bhxe4++", "Bhxe4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopCapturesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopCapturesFromFile, expected);
         }
 
         [Test]
@@ -355,7 +355,7 @@ namespace Software64.ChessRegex.UnitTest
                 "B7xe4++", "B7xe4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopCapturesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopCapturesFromRank, expected);
         }
 
         [Test]
@@ -369,7 +369,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Bh7xe4++", "Bh7xe4#"
             };
 
-            ActAndAssert(ChessRegex2.BishopCapturesFromSquare, expected);
+            AssertPatternReturnsExpected(ChessRegex2.BishopCapturesFromSquare, expected);
         }
 
         [Test]
@@ -383,7 +383,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qd5++", "Qd5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenMoves, expected);
         }
 
         [Test]
@@ -397,7 +397,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qad5++", "Qad5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenMovesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenMovesFromFile, expected);
         }
 
         [Test]
@@ -411,7 +411,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Q2d5++", "Q2d5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenMovesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenMovesFromRank, expected);
         }
 
         [Test]
@@ -425,7 +425,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qa2d5++", "Qa2d5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenMovesFromSquare, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenMovesFromSquare, expected);
         }
 
         [Test]
@@ -439,7 +439,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qxd5++", "Qxd5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenCaptures, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenCaptures, expected);
         }
 
         [Test]
@@ -453,7 +453,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qaxd5++", "Qaxd5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenCapturesFromFile, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenCapturesFromFile, expected);
         }
 
         [Test]
@@ -467,7 +467,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Q2xd5++", "Q2xd5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenCapturesFromRank, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenCapturesFromRank, expected);
         }
 
         [Test]
@@ -481,7 +481,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Qa2xd5++", "Qa2xd5#"
             };
 
-            ActAndAssert(ChessRegex2.QueenCapturesFromSquare, expected);
+            AssertPatternReturnsExpected(ChessRegex2.QueenCapturesFromSquare, expected);
         }
 
         [Test]
@@ -495,7 +495,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Kd1++", "Kd1#"
             };
 
-            ActAndAssert(ChessRegex2.KingMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KingMoves, expected);
         }
 
         [Test]
@@ -509,7 +509,7 @@ namespace Software64.ChessRegex.UnitTest
                 "Kxd1++", "Kxd1#"
             };
 
-            ActAndAssert(ChessRegex2.KingCaptures, expected);
+            AssertPatternReturnsExpected(ChessRegex2.KingCaptures, expected);
         }
 
         [Test]
@@ -523,7 +523,7 @@ namespace Software64.ChessRegex.UnitTest
                 "O-O++", "O-O#"
             };
 
-            ActAndAssert(ChessRegex2.CastledKingSide, expected);
+            AssertPatternReturnsExpected(ChessRegex2.CastledKingSide, expected);
         }
 
         [Test]
@@ -537,10 +537,10 @@ namespace Software64.ChessRegex.UnitTest
                 "O-O-O++", "O-O-O#"
             };
 
-            ActAndAssert(ChessRegex2.CastledQueenSide, expected);
+            AssertPatternReturnsExpected(ChessRegex2.CastledQueenSide, expected);
         }
 
-        private static void ActAndAssert(string pattern, List<string> expected)
+        private static void AssertPatternReturnsExpected(string pattern, List<string> expected)
         {
             // Act
             var actual = TestFixture.MoveExamples.Where(move => Regex.IsMatch(move, pattern)).ToList();
