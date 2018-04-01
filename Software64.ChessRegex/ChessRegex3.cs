@@ -8,17 +8,17 @@
         /// <summary>
         /// It matches the following type of moves: "e4", "e4!", "e4!!", "e4?", "e4??", "e4!?", "e4?!"
         /// </summary>
-        public static string Pawn => @"^([a-h][1-8]([\!\?]{1,2})?)$";
+        public static string PawnMoves => @"^([a-h][1-8]([\!\?]{1,2})?)$";
 
         /// <summary>
         /// It matches the following type of moves: "e4+", "e4+!", "e4+!!", "e4+?", "e4+??", "e4+!?", "e4+?!"
         /// </summary>
-        public static string PawnCheck => @"^([a-h][1-8](\+)([\!\?]{1,2})?)$";
+        public static string PawnMovesCheck => @"^([a-h][1-8](\+)([\!\?]{1,2})?)$";
 
         /// <summary>
         /// It matches the following type of moves: "e4++", "e4#"
         /// </summary>
-        public static string PawnCheckmate => @"^([a-h][1-8](\+{2}|#))$";
+        public static string PawnMovesCheckmate => @"^([a-h][1-8](\+{2}|#))$";
 
         /// <summary>
         /// It matches the following type of moves: "e8=Q", "e8=Q!", "e8=Q!!", "e8=Q?", "e8=Q??", "e8=Q!?", "e8=Q?!"

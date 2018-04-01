@@ -17,7 +17,7 @@ namespace Software64.ChessRegex.UnitTest
                 "e4", "e4!", "e4!!", "e4?", "e4??", "e4!?", "e4?!"
             };
 
-            AssertPatternReturnsExpected(ChessRegex3.Pawn, expected);
+            AssertPatternReturnsExpected(ChessRegex3.PawnMoves, expected);
         }
 
         [Test] 
@@ -29,7 +29,7 @@ namespace Software64.ChessRegex.UnitTest
                 "e4+", "e4+!", "e4+!!", "e4+?", "e4+??", "e4+!?", "e4+?!"
             };
 
-            AssertPatternReturnsExpected(ChessRegex3.PawnCheck, expected);
+            AssertPatternReturnsExpected(ChessRegex3.PawnMovesCheck, expected);
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace Software64.ChessRegex.UnitTest
                 "e4++", "e4#"
             };
 
-            AssertPatternReturnsExpected(ChessRegex3.PawnCheckmate, expected);
+            AssertPatternReturnsExpected(ChessRegex3.PawnMovesCheckmate, expected);
         }
 
         [Test]
