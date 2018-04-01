@@ -275,6 +275,145 @@
         /// </summary>
         public static string KnightCapturesFromSquareCheckmate => @"^(N[a-h][1-8]x[a-h][1-8](\+{2}|#))$";
 
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// It matches the following type of moves: "Be4", "Be4!", "Be4!!", "Be4?", "Be4??", "Be4!?", "Be4?!"
+        /// </summary>
+        public static string BishopMoves => @"^(B[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Be4+", "Be4+!", "Be4+!!", "Be4+?", "Be4+??", "Be4+!?", "Be4+?!"
+        /// </summary>
+        public static string BishopMovesCheck => @"^(B[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Be4++", "Be4#"
+        /// </summary>
+        public static string BishopMovesCheckmate => @"^(B[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bhe4", "Bhe4!", "Bhe4!!", "Bhe4?", "Bhe4??", "Bhe4!?", "Bhe4?!"
+        /// </summary>
+        public static string BishopMovesFromFile => @"^(B[a-h][a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bhe4+", "Bhe4+!", "Bhe4+!!", "Bhe4+?", "Bhe4+??", "Bhe4+!?", "Bhe4+?!"
+        /// </summary>
+        public static string BishopMovesFromFileCheck => @"^(B[a-h][a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bhe4++", "Bhe4#"
+        /// </summary>
+        public static string BishopMovesFromFileCheckmate => @"^(B[a-h][a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "B7e4", "B7e4!", "B7e4!!", "B7e4?", "B7e4??", "B7e4!?", "B7e4?!"
+        /// </summary>
+        public static string BishopMovesFromRank => @"^(B[1-8][a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "B7e4+", "B7e4+!", "B7e4+!!", "B7e4+?", "B7e4+??", "B7e4+!?", "B7e4+?!"
+        /// </summary>
+        public static string BishopMovesFromRankCheck => @"^(B[1-8][a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "B7e4++", "B7e4#"
+        /// </summary>
+        public static string BishopMovesFromRankCheckmate => @"^(B[1-8][a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bh7e4", "Bh7e4!", "Bh7e4!!", "Bh7e4?", "Bh7e4??", "Bh7e4!?", "Bh7e4?!"
+        /// </summary>
+        public static string BishopMovesFromSquare => @"^(B[a-h][1-8][a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bh7e4+", "Bh7e4+!", "Bh7e4+!!", "Bh7e4+?", "Bh7e4+??", "Bh7e4+!?", "Bh7e4+?!"
+        /// </summary>
+        public static string BishopMovesFromSquareCheck => @"^(B[a-h][1-8][a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bh7e4++", "Bh7e4#"
+        /// </summary>
+        public static string BishopMovesFromSquareCheckmate => @"^(B[a-h][1-8][a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bxe4", "Bxe4!", "Bxe4!!", "Bxe4?", "Bxe4??", "Bxe4!?", "Bxe4?!"
+        /// </summary>
+        public static string BishopCaptures => @"^(Bx[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bxe4+", "Bxe4+!", "Bxe4+!!", "Bxe4+?", "Bxe4+??", "Bxe4+!?", "Bxe4+?!"
+        /// </summary>
+        public static string BishopCapturesCheck => @"^(Bx[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bxe4++", "Bxe4#"
+        /// </summary>
+        public static string BishopCapturesCheckmate => @"^(Bx[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bhxe4", "Bhxe4!", "Bhxe4!!", "Bhxe4?", "Bhxe4??", "Bhxe4!?", "Bhxe4?!"
+        /// </summary>
+        public static string BishopCapturesFromFile => @"^(B[a-h]x[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bhxe4+", "Bhxe4+!", "Bhxe4+!!", "Bhxe4+?", "Bhxe4+??", "Bhxe4+!?", "Bhxe4+?!"
+        /// </summary>
+        public static string BishopCapturesFromFileCheck => @"^(B[a-h]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bhxe4++", "Bhxe4#"
+        /// </summary>
+        public static string BishopCapturesFromFileCheckmate => @"^(B[a-h]x[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "B7xe4", "B7xe4!", "B7xe4!!", "B7xe4?", "B7xe4??", "B7xe4!?", "B7xe4?!"
+        /// </summary>
+        public static string BishopCapturesFromRank => @"^(B[1-8]x[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "B7xe4+", "B7xe4+!", "B7xe4+!!", "B7xe4+?", "B7xe4+??", "B7xe4+!?", "B7xe4+?!"
+        /// </summary>
+        public static string BishopCapturesFromRankCheck => @"^(B[1-8]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "B7xe4++", "B7xe4#"
+        /// </summary>
+        public static string BishopCapturesFromRankCheckmate => @"^(B[1-8]x[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bh7xe4", "Bh7xe4!", "Bh7xe4!!", "Bh7xe4?", "Bh7xe4??", "Bh7xe4!?", "Bh7xe4?!"
+        /// </summary>
+        public static string BishopCapturesFromSquare => @"^(B[a-h][1-8]x[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bh7xe4+", "Bh7xe4+!", "Bh7xe4+!!", "Bh7xe4+?", "Bh7xe4+??", "Bh7xe4+!?", "Bh7xe4+?!"
+        /// </summary>
+        public static string BishopCapturesFromSquareCheck => @"^(B[a-h][1-8]x[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Bh7xe4++", "Bh7xe4#"
+        /// </summary>
+        public static string BishopCapturesFromSquareCheckmate => @"^(B[a-h][1-8]x[a-h][1-8](\+{2}|#))$";
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// It matches the following type of moves:  "O-O", "O-O!", "O-O!!", "O-O?", "O-O??", "O-O!?", "O-O?!"
         /// </summary>

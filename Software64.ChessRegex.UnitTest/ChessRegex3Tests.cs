@@ -656,6 +656,312 @@ namespace Software64.ChessRegex.UnitTest
             AssertPatternReturnsExpected(ChessRegex3.KnightCapturesFromSquareCheckmate, expected);
         }
 
+
+
+
+
+
+
+
+
+
+        [Test]
+        public void Bishop_moves_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Be4", "Be4!", "Be4!!", "Be4?", "Be4??", "Be4!?", "Be4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMoves, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Be4+", "Be4+!", "Be4+!!", "Be4+?", "Be4+??", "Be4+!?", "Be4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Be4++", "Be4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bhe4", "Bhe4!", "Bhe4!!", "Bhe4?", "Bhe4??", "Bhe4!?", "Bhe4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromFile, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bhe4+", "Bhe4+!", "Bhe4+!!", "Bhe4+?", "Bhe4+??", "Bhe4+!?", "Bhe4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromFileCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bhe4++", "Bhe4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "B7e4", "B7e4!", "B7e4!!", "B7e4?", "B7e4??", "B7e4!?", "B7e4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromRank, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "B7e4+", "B7e4+!", "B7e4+!!", "B7e4+?", "B7e4+??", "B7e4+!?", "B7e4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "B7e4++", "B7e4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromRankCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bh7e4", "Bh7e4!", "Bh7e4!!", "Bh7e4?", "Bh7e4??", "Bh7e4!?", "Bh7e4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromSquare, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_square_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Bh7e4+", "Bh7e4+!", "Bh7e4+!!", "Bh7e4+?", "Bh7e4+??", "Bh7e4+!?", "Bh7e4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromSquareCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_moves_from_square_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Bh7e4++", "Bh7e4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopMovesFromSquareCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bxe4", "Bxe4!", "Bxe4!!", "Bxe4?", "Bxe4??", "Bxe4!?", "Bxe4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCaptures, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Bxe4+", "Bxe4+!", "Bxe4+!!", "Bxe4+?", "Bxe4+??", "Bxe4+!?", "Bxe4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Bxe4++", "Bxe4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_file_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bhxe4", "Bhxe4!", "Bhxe4!!", "Bhxe4?", "Bhxe4??", "Bhxe4!?", "Bhxe4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromFile, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_file_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Bhxe4+", "Bhxe4+!", "Bhxe4+!!", "Bhxe4+?", "Bhxe4+??", "Bhxe4+!?", "Bhxe4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromFileCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_file_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+               "Bhxe4++", "Bhxe4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromFileCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_rank_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "B7xe4", "B7xe4!", "B7xe4!!", "B7xe4?", "B7xe4??", "B7xe4!?", "B7xe4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromRank, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_rank_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "B7xe4+", "B7xe4+!", "B7xe4+!!", "B7xe4+?", "B7xe4+??", "B7xe4+!?", "B7xe4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromRankCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_rank_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "B7xe4++", "B7xe4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromRankCheckmate, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_square_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bh7xe4", "Bh7xe4!", "Bh7xe4!!", "Bh7xe4?", "Bh7xe4??", "Bh7xe4!?", "Bh7xe4?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromSquare, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_square_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bh7xe4+", "Bh7xe4+!", "Bh7xe4+!!", "Bh7xe4+?", "Bh7xe4+??", "Bh7xe4+!?", "Bh7xe4+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromSquareCheck, expected);
+        }
+
+        [Test]
+        public void Bishop_captures_from_square_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Bh7xe4++", "Bh7xe4#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.BishopCapturesFromSquareCheckmate, expected);
+        }
+
+
+
+
+
+
+
+
+
+
         [Test]
         public void Castling_kingside_test()
         {
