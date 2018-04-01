@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChessRegex0Tests.cs" />
     <Compile Include="ChessRegex2Tests.cs" />
     <Compile Include="ChessRegex3Tests.cs" />
     <Compile Include="ChessRegexTestBase.cs" />

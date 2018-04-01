@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChessRegex0.cs" />
     <Compile Include="ChessRegex2.cs" />
     <Compile Include="ChessRegex3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
