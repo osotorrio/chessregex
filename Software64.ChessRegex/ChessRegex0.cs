@@ -6,8 +6,8 @@
     public static class ChessRegex0
     {
         /// <summary>
-        /// It matches when a Pawn is moved
+        /// It matches all king of chess moves
         /// </summary>
-        public static string AllTypeOfMoves => @"((?:[NBRQK]?[a-h]?[1-8]?x?[a-h][1-8](?:\=[RNBQ])?|O(-?O){1,2})[\+#]?([\!\?]{1,2})?)";
+        public static string AllMoves => @"((?:[NBRQK]?[a-h]?[1-8]?x?[a-h][1-8](?:\=[RNBQ])?|O(-?O){1,2})[\+#]?([\!\?]{1,2})?)";
     }
 }

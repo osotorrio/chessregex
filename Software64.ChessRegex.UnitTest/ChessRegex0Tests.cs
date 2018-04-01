@@ -135,7 +135,7 @@ namespace Software64.ChessRegex.UnitTest
                 "O-O-O++", "O-O-O#"
             };
 
-            AssertPatternReturnsExpected(ChessRegex0.AllTypeOfMoves, expected);
+            AssertPatternReturnsExpected(ChessRegex0.AllMoves, expected);
         }
     }
 }
