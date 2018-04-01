@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Software64.ChessRegex.UnitTest
 {
     [TestFixture]
-    public class ChessRegex1Tests
+    public class ChessRegex1Tests : ChessRegexTestBase
     {
         [Test]
         public void Pawn_moves_test()
@@ -197,15 +197,6 @@ namespace Software64.ChessRegex.UnitTest
             };
 
             AssertPatternReturnsExpected(ChessRegex1.Castled, expected);
-        }
-
-        private static void AssertPatternReturnsExpected(string pattern, List<string> expected)
-        {
-            // Act
-            var actual = TestFixture.MoveExamples.Where(move => Regex.IsMatch(move, pattern)).ToList();
-
-            // Assert
-            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }
