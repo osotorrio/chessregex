@@ -512,6 +512,34 @@ namespace Software64.ChessRegex.UnitTest
             ActAndAssert(ChessRegex2.KingCaptures, expected);
         }
 
+        [Test]
+        public void Castled_King_side_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "O-O", "O-O!", "O-O!!", "O-O?", "O-O??", "O-O!?", "O-O?!",
+                "O-O+", "O-O+!", "O-O+!!", "O-O+?", "O-O+??", "O-O+!?", "O-O+?!",
+                "O-O++", "O-O#"
+            };
+
+            ActAndAssert(ChessRegex2.CastledKingSide, expected);
+        }
+
+        [Test]
+        public void Castled_Queen_side_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "O-O-O", "O-O-O!", "O-O-O!!", "O-O-O?", "O-O-O??", "O-O-O!?", "O-O-O?!",
+                "O-O-O+", "O-O-O+!", "O-O-O+!!", "O-O-O+?", "O-O-O+??", "O-O-O+!?", "O-O-O+?!",
+                "O-O-O++", "O-O-O#"
+            };
+
+            ActAndAssert(ChessRegex2.CastledQueenSide, expected);
+        }
+
         private static void ActAndAssert(string pattern, List<string> expected)
         {
             // Act

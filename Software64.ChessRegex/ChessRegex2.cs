@@ -292,5 +292,21 @@
         /// "Kxd1++", "Kxd1#"
         /// </summary>
         public static string KingCaptures => @"^(Kx[a-h][1-8](\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "O-O", "O-O!", "O-O!!", "O-O?", "O-O??", "O-O!?", "O-O?!",
+        /// "O-O+", "O-O+!", "O-O+!!", "O-O+?", "O-O+??", "O-O+!?", "O-O+?!",
+        /// "O-O++", "O-O#",
+        /// </summary>
+        public static string CastledKingSide => @"^((O-O|0-0)(\+|\++|\#)?([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: 
+        /// "O-O-O", "O-O-O!", "O-O-O!!", "O-O-O?", "O-O-O??", "O-O-O!?", "O-O-O?!",
+        /// "O-O-O+", "O-O-O+!", "O-O-O+!!", "O-O-O+?", "O-O-O+??", "O-O-O+!?", "O-O-O+?!",
+        /// "O-O-O++", "O-O-O#"
+        /// </summary>
+        public static string CastledQueenSide => @"^((O-O-O|0-0-0)(\+|\++|\#)?([\!\?]{1,2})?)$";
     }
 }
