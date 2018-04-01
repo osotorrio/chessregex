@@ -1233,6 +1233,78 @@ namespace Software64.ChessRegex.UnitTest
         }
         
         [Test]
+        public void King_moves_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kd1", "Kd1!", "Kd1!!", "Kd1?", "Kd1??", "Kd1!?", "Kd1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KingMoves, expected);
+        }
+
+        [Test]
+        public void King_moves_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kd1+", "Kd1+!", "Kd1+!!", "Kd1+?", "Kd1+??", "Kd1+!?", "Kd1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KingMovesCheck, expected);
+        }
+
+        [Test]
+        public void King_moves_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kd1++", "Kd1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KingMovesCheckmate, expected);
+        }
+
+        [Test]
+        public void King_captures_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kxd1", "Kxd1!", "Kxd1!!", "Kxd1?", "Kxd1??", "Kxd1!?", "Kxd1?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KingCaptures, expected);
+        }
+
+        [Test]
+        public void King_captures_with_check_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kxd1+", "Kxd1+!", "Kxd1+!!", "Kxd1+?", "Kxd1+??", "Kxd1+!?", "Kxd1+?!"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KingCapturesCheck, expected);
+        }
+
+        [Test]
+        public void King_captures_with_checkmate_test()
+        {
+            // Arrange
+            var expected = new List<string>
+            {
+                "Kxd1++", "Kxd1#"
+            };
+
+            AssertPatternReturnsExpected(ChessRegex3.KingCapturesCheckmate, expected);
+        }
+
+        [Test]
         public void Castling_kingside_test()
         {
             // Arrange

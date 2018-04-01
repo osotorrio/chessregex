@@ -516,6 +516,36 @@
         public static string QueenCapturesFromSquareCheckmate => @"^(Q[a-h][1-8]x[a-h][1-8](\+{2}|#))$";
         
         /// <summary>
+        /// It matches the following type of moves: "Kd1", "Kd1!", "Kd1!!", "Kd1?", "Kd1??", "Kd1!?", "Kd1?!"
+        /// </summary>
+        public static string KingMoves => @"^(K[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Kd1+", "Kd1+!", "Kd1+!!", "Kd1+?", "Kd1+??", "Kd1+!?", "Kd1+?!"
+        /// </summary>
+        public static string KingMovesCheck => @"^(K[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Kd1++", "Kd1#"
+        /// </summary>
+        public static string KingMovesCheckmate => @"^(K[a-h][1-8](\+{2}|#))$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Kxd1", "Kxd1!", "Kxd1!!", "Kxd1?", "Kxd1??", "Kxd1!?", "Kxd1?!"
+        /// </summary>
+        public static string KingCaptures => @"^(Kx[a-h][1-8]([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Kxd1+", "Kxd1+!", "Kxd1+!!", "Kxd1+?", "Kxd1+??", "Kxd1+!?", "Kxd1+?!"
+        /// </summary>
+        public static string KingCapturesCheck => @"^(Kx[a-h][1-8](\+)([\!\?]{1,2})?)$";
+
+        /// <summary>
+        /// It matches the following type of moves: "Kxd1++", "Kxd1#"
+        /// </summary>
+        public static string KingCapturesCheckmate => @"^(Kx[a-h][1-8](\+{2}|#))$";
+        
+        /// <summary>
         /// It matches the following type of moves:  "O-O", "O-O!", "O-O!!", "O-O?", "O-O??", "O-O!?", "O-O?!"
         /// </summary>
         public static string CastledKingside => @"^((O-O|0-0)([\!\?]{1,2})?)$";
